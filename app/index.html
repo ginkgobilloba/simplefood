@@ -1,13 +1,540 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="./images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <title>Сервис доставки еды Симпл Фуд</title>
   <link rel="stylesheet" href="./css/styles.min.css">
 </head>
 <body>
-  <div class="block"></div>
+  <header class="header" id="header">
+    <div class="header__container container">
+      <nav class="header__nav">
+        <a class="logo" href="#">
+          <img class="logo__img" src="./images/logo.svg" width="200" height="39"
+            alt="Логотип сервиса доставки еды Симпл Фуд">
+        </a>
+
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="link link--header current">
+              Главная
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="link link--header">
+              Блюда
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="link link--header">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="usernav">
+        <button class="usernav__btn" type="button">
+          <span class="sr-only">
+            Поиск по сайту
+          </span>
+          <svg class="usernav__icon" width="19" height="19">
+            <use href="./images/icons.svg#search"></use>
+          </svg>
+        </button>
+        <button class="usernav__btn usernav__btn--cart" type="button">
+          <span class="sr-only">
+            Корзина товаров. Цифра показывает количество товаров в корзине
+          </span>
+          <span class="usernav__btn-counter">
+            4
+          </span>
+          <svg class="usernav__icon" width="19" height="19">
+            <use href="./images/icons.svg#cart"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <h1 class="sr-only">
+      Сервис доставки еды Симпл Фуд
+    </h1>
+    <section class="hero section">
+      <div class="hero__container container" style="background-image: url('./images/scooter.png');">
+        <div class="hero__content">
+          <h2 class="hero__title">
+            <span class="hero__title-decor">
+              Доставка
+            </span>
+            за 15 минут
+          </h2>
+          <p class="hero__text">
+            Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+          </p>
+          <ul class="hero__list">
+            <li class="hero__item">
+              <a class="primary-btn primary-btn--hero" href="#">
+                Заказать
+              </a>
+            </li>
+            <li class="hero__item">
+              <a class="showmore-link" href="#">
+                Подробнее
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="popular section">
+      <div class="container">
+        <h2 class="popular__title title">
+          Популярные категории
+        </h2>
+        <ul class="popular__filter">
+          <li class="popular__filter-item">
+            <button class="popular__filter-btn" type="button" data-filter="all">
+              <svg class="popular__filter-icon" width="44" height="44">
+                <use href="./images/icons.svg#burgers"></use>
+              </svg>
+              Бургеры
+            </button>
+          </li>
+          <li class="popular__filter-item">
+            <button class="popular__filter-btn" type="button" data-filter=".category-a">
+              <svg class="popular__filter-icon" width="44" height="44">
+                <use href="./images/icons.svg#pizza"></use>
+              </svg>
+              Пицца
+            </button>
+          </li>
+          <li class="popular__filter-item">
+            <button class="popular__filter-btn" type="button" data-filter=".category-b">
+              <svg class="popular__filter-icon" width="44" height="44">
+                <use href="./images/icons.svg#sandwiches"></use>
+              </svg>
+              Сендвичи
+            </button>
+          </li>
+          <li class="popular__filter-item">
+            <button class="popular__filter-btn" type="button" data-filter=".category-c">
+              <svg class="popular__filter-icon" width="44" height="44">
+                <use href="./images/icons.svg#asian"></use>
+              </svg>
+              Азиатская кухня
+            </button>
+          </li>
+          <li class="popular__filter-item">
+            <button class="popular__filter-btn" type="button" data-filter=".category-d">
+              <svg class="popular__filter-icon" width="44" height="44">
+                <use href="./images/icons.svg#sets"></use>
+              </svg>
+              Cеты
+            </button>
+          </li>
+        </ul>
+
+        <ul class="popular__list">
+          <li class="popular__item mix category-a">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/01.jpg" alt="Чизбургер с листьями салата"
+                  width="140" height="140">
+                <h3 class="product-card__descr">
+                  Чизбургер с листьями салата
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    160
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-a">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/02.jpg" alt="Бифбургер" width="140" height="140">
+                <h3 class="product-card__descr">
+                  Бифбургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    190
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-b">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/03.jpg" alt="Королевский чизбургер" width="140"
+                  height="140">
+                <h3 class="product-card__descr">
+                  Королевский чизбургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    260
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-b">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/04.jpg" alt="Черный гамбургер" width="140"
+                  height="140">
+                <h3 class="product-card__descr">
+                  Черный гамбургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    199
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-c">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/05.jpg" alt="Чикен бургер" width="140"
+                  height="140">
+                <h3 class="product-card__descr">
+                  Чикен бургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    180
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-c">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/01.jpg" alt="Чизбургер с листьями салата"
+                  width="140" height="140">
+                <h3 class="product-card__descr">
+                  Чизбургер с листьями салата
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    160
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-d">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/02.jpg" alt="Бифбургер" width="140" height="140">
+                <h3 class="product-card__descr">
+                  Бифбургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    190
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-d">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/03.jpg" alt="Королевский чизбургер" width="140"
+                  height="140">
+                <h3 class="product-card__descr">
+                  Королевский чизбургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    260
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-d">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/04.jpg" alt="Черный гамбургер" width="140"
+                  height="140">
+                <h3 class="product-card__descr">
+                  Черный гамбургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    199
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+
+          <li class="popular__item mix category-d">
+            <article class="product-card">
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="./images/products/05.jpg" alt="Чикен бургер" width="140"
+                  height="140">
+                <h3 class="product-card__descr">
+                  Чикен бургер
+                </h3>
+                <span class="product-card__price">
+                  <span class="product-card__cost">
+                    180
+                  </span>
+                  <span class="currency">
+                    грн.
+                  </span>
+                </span>
+              </a>
+              <button class="primary-btn" type="button">
+                В корзину
+              </button>
+            </article>
+          </li>
+        </ul>
+
+        <a class="showmore-link" href="#">
+          Показать еще
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="subscribe-email">
+        <a class="subscribe-email__logo logo" href="#">
+          <img class="logo__img" src="./images/logo.svg" width="200" height="39"
+            alt="Логотип сервиса доставки еды Симпл Фуд">
+        </a>
+        <form class="subscribe-email__form" action="#">
+          <label class="subscribe-email__label">
+            <span class="sr-only">
+              Введите ваш email для подписки
+            </span>
+            <input class="subscribe-email__input" placeholder="Ваш email" type="email" name="usermail" required>
+          </label>
+          <button class="subscribe-email__btn" type="submit">
+            <svg class="subscribe-email__icon" width="17" height="16">
+              <use href="./images/icons.svg#telegram"></use>
+            </svg>
+            Подписаться
+          </button>
+        </form>
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="link" href="#">
+            Как это работает
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            О нас
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Скачать приложение
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Продукты
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Новости
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Блог
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Блюда
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Партнеры
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Что нового?
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Меню
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            ЧаВо
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="link" href="#">
+            Карта сайта
+          </a>
+        </li>
+      </ul>
+
+      <address class="contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <p class="contacts__location">
+              <svg class="contacts__icon" width="24" height="24">
+                <use href="./images/icons.svg#location"></use>
+              </svg>
+              ул. Т.Г.Шевченко, 1
+            </p>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+380501112233">
+              <svg class="contacts__icon" width="24" height="24">
+                <use href="./images/icons.svg#tel"></use>
+              </svg>
+              380501112233
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:support@sfood.com">
+              <svg class="contacts__icon" width="24" height="24">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+              support@sfood.com
+            </a>
+          </li>
+        </ul>
+        <ul class="contacts__social-list">
+          <li class="contacts__social-item">
+            <a class="contacts__social-link" href="#" target="_blank">
+              <span class="sr-only">
+                Фейсбук
+              </span>
+              <svg class="contacts__social-icon" width="21" height="21">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__social-item">
+            <a class="contacts__social-link" href="#" target="_blank">
+              <span class="sr-only">
+                Твиттер
+              </span>
+              <svg class="contacts__social-icon" width="21" height="21">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__social-item">
+            <a class="contacts__social-link" href="#" target="_blank">
+              <span class="sr-only">
+                Инстаграм
+              </span>
+              <svg class="contacts__social-icon" width="21" height="21">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+
+    <div class="footer__copy">
+      <span class="footer__copy-text">
+        © 2022 Simple Food
+      </span>
+    </div>
+  </footer>
   <script src="./js/main.min.js"></script>
 </body>
 </html>

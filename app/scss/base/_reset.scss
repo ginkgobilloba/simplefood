@@ -32,6 +32,16 @@ dd {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 li {
   list-style: none;
 }
@@ -54,4 +64,27 @@ select {
 
 a {
   text-decoration: none;
+  color: inherit;
+  outline: transparent;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  padding: 0;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
 }

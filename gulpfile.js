@@ -7,6 +7,7 @@ const gulpConcat = require("gulp-concat");
 const gulpUglify = require("gulp-uglify");
 
 const gulpImagemin = require("gulp-imagemin");
+const gulpSvgStore = require("gulp-svgstore");
 
 const browserSync = require("browser-sync").create();
 
@@ -14,6 +15,7 @@ const gulpPlumber = require("gulp-plumber");
 const gulpNotify = require("gulp-notify");
 
 const del = require("del");
+const gulpSvgstore = require("gulp-svgstore");
 
 // gulpPlumber налаштування
 const gulpPlumberConfig = {
@@ -54,12 +56,18 @@ function styles() {
 }
 
 function scripts() {
-  return src(["./app/js/main.js"])
+  return src(["./node_modules/mixitup/dist/mixitup.js", "./app/js/main.js"])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(gulpConcat("main.min.js"))
     .pipe(gulpUglify())
     .pipe(dest("./app/js"))
     .pipe(browserSync.stream());
+}
+
+function svgSprite() {
+  return src("./app/images/icons/**/*.svg")
+    .pipe(gulpSvgstore())
+    .pipe(dest("./app/images"));
 }
 
 // ТАСКИ ДЛЯ ФІНАЛЬНОЇ ЗБІРКИ
@@ -97,6 +105,7 @@ function watching() {
 }
 
 exports.clean = cleanDist;
+exports.svg = svgSprite;
 
 exports.default = parallel(styles, scripts, server, watching);
 
