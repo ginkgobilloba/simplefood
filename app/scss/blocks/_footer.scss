@@ -1,0 +1,25 @@
+.footer {
+
+  &__container {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: flex-start;
+
+    >*:not(:last-child) {
+      margin-right: 70px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px 70px;
+  }
+
+  &__copy {
+    padding: 30px 0;
+    border-top: 1px solid $secondary900;
+    font-size: 14px;
+    text-align: center;
+  }
+}

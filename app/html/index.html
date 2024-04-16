@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./blocks/_head.html", {pageTitle: "Главная"})
+
+<body>
+
+  @@include("./blocks/_header.html", {currentPage: "home"})
+
+  <main class="main">
+
+    <h1 class="sr-only">
+      Сервис доставки еды Симпл Фуд
+    </h1>
+
+    @@include("./home/_hero.html")
+
+    @@include("./home/_popular.html")
+
+  </main>
+
+  @@include("./blocks/_footer.html")
+
+</body>
+</html>

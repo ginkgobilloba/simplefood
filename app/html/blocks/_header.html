@@ -1,0 +1,57 @@
+<header class="header" id="header">
+  <div class="header__container container">
+    <nav class="header__nav">
+
+      <a class="logo" href="#">
+        <img class="logo__img" src="./images/logo.svg" width="200" height="39"
+          alt="Логотип сервиса доставки еды Симпл Фуд">
+      </a>
+
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#" class="link link--header @@if (currentPage === 'home') {current}">
+            Главная
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a href="#" class="link link--header @@if (currentPage === 'products') {current}">
+            Блюда
+          </a>
+        </li>
+
+        <li class="header__item">
+          <a href="#" class="link link--header @@if (currentPage === 'contacts') {current}">
+            Контакты
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <div class="user-nav">
+
+      <button class="user-nav__btn" type="button">
+        <span class="sr-only">
+          Поиск по сайту
+        </span>
+        <svg class="user-nav__icon" width="19" height="19">
+          <use href="./images/icons.svg#search"></use>
+        </svg>
+      </button>
+
+      <button class="user-nav__btn user-nav__btn--cart" type="button">
+        <span class="sr-only">
+          Корзина товаров. Цифра показывает количество товаров в корзине
+        </span>
+        <span class="user-nav__btn-counter">
+          4
+        </span>
+        <svg class="user-nav__icon" width="19" height="19">
+          <use href="./images/icons.svg#cart"></use>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</header>

@@ -1,0 +1,101 @@
+<footer class="footer">
+  <div class="footer__container container">
+
+    <div class="subscribe-email">
+      <a class="subscribe-email__logo logo" href="#">
+        <img class="logo__img" src="./images/logo.svg" width="200" height="39"
+          alt="Логотип сервиса доставки еды Симпл Фуд">
+      </a>
+
+      <form class="subscribe-email__form" action="#">
+        <label class="subscribe-email__label">
+          <span class="sr-only">
+            Введите ваш email для подписки
+          </span>
+          <input class="subscribe-email__input" placeholder="Ваш email" type="email" name="usermail" required>
+        </label>
+        <button class="subscribe-email__btn" type="submit">
+          <svg class="subscribe-email__icon" width="17" height="16">
+            <use href="./images/icons.svg#telegram"></use>
+          </svg>
+          Подписаться
+        </button>
+      </form>
+    </div>
+
+    <ul class="footer__list">
+      <li class="footer__item">
+        <a class="link" href="#">
+          Как это работает
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          О нас
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Скачать приложение
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Продукты
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Новости
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Блог
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Блюда
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Партнеры
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Что нового?
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Меню
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          ЧаВо
+        </a>
+      </li>
+      <li class="footer__item">
+        <a class="link" href="#">
+          Карта сайта
+        </a>
+      </li>
+    </ul>
+
+    @@include("../components/_contacts.html")
+
+  </div>
+
+  <div class="footer__copy">
+    <span class="footer__copy-text">
+      © 2022 Simple Food
+    </span>
+  </div>
+
+</footer>
+
+<script src="./js/main.min.js"></script>

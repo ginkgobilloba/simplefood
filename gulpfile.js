@@ -1,23 +1,26 @@
 const { src, dest, series, parallel, watch } = require("gulp");
 
+const fileInclude = require("gulp-file-include");
+const htmlmin = require("gulp-htmlmin");
+
 const gulpSass = require("gulp-sass")(require("sass"));
+const gulpSourcemaps = require("gulp-sourcemaps");
 const gulpAutoprefixer = require("gulp-autoprefixer");
 
 const gulpConcat = require("gulp-concat");
 const gulpUglify = require("gulp-uglify");
 
-const gulpImagemin = require("gulp-imagemin");
-const gulpSvgStore = require("gulp-svgstore");
+const imagemin = require("gulp-imagemin");
+const gulpSvgstore = require("gulp-svgstore");
 
 const browserSync = require("browser-sync").create();
+
+const del = require("del");
 
 const gulpPlumber = require("gulp-plumber");
 const gulpNotify = require("gulp-notify");
 
-const del = require("del");
-const gulpSvgstore = require("gulp-svgstore");
-
-// gulpPlumber налаштування
+// gulpPlumber config
 const gulpPlumberConfig = {
   errorHandler: gulpNotify.onError({
     message: "Error <%= error.message %>",
@@ -25,43 +28,55 @@ const gulpPlumberConfig = {
   })
 };
 
-// ТАСКИ ДЛЯ РОЗРОБКИ
+// TASKS FOR DEV
+
 function server() {
   browserSync.init({
     server: {
-      baseDir: "./app"
+      baseDir: "./dist"
     },
     notify: false
   });
 }
 
+function cleanDist() {
+  return del("./dist");
+}
+
+function html() {
+  return src("./app/html/*.html")
+    .pipe(gulpPlumber(gulpPlumberConfig))
+    .pipe(fileInclude({ prefix: "@@", basepath: "@file" }))
+    .pipe(dest("./dist"));
+}
+
 function styles() {
-  return (
-    src("./app/scss/styles.scss")
-      .pipe(gulpPlumber(gulpPlumberConfig))
-      .pipe(
-        gulpSass({
-          outputStyle: "compressed"
-        })
-      )
-      // .pipe(
-      //   gulpAutoprefixer({
-      //     overrideBrowserslist: ["last 10 versions"]
-      //   })
-      // )
-      .pipe(gulpConcat("styles.min.css"))
-      .pipe(dest("./app/css"))
-      .pipe(browserSync.stream())
-  );
+  return src("./app/scss/main.scss")
+    .pipe(gulpPlumber(gulpPlumberConfig))
+    .pipe(gulpSourcemaps.init())
+    .pipe(
+      gulpSass({
+        outputStyle: "expanded"
+      })
+    )
+    .pipe(gulpConcat("main.min.css"))
+    .pipe(gulpSourcemaps.write())
+    .pipe(dest("./dist/css"))
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
   return src(["./node_modules/mixitup/dist/mixitup.js", "./app/js/main.js"])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(gulpConcat("main.min.js"))
-    .pipe(gulpUglify())
-    .pipe(dest("./app/js"))
+    .pipe(dest("./dist/js"))
     .pipe(browserSync.stream());
+}
+
+function images() {
+  return src(["./app/images/**/*", "!./app/images/icons/**/*"]).pipe(
+    dest("./dist/images")
+  );
 }
 
 function svgSprite() {
@@ -70,43 +85,93 @@ function svgSprite() {
     .pipe(dest("./app/images"));
 }
 
-// ТАСКИ ДЛЯ ФІНАЛЬНОЇ ЗБІРКИ
-function cleanDist() {
-  return del("./dist");
+function fonts() {
+  return src("./app/fonts/**/*").pipe(dest("./dist/fonts"));
 }
 
-function images() {
-  return src(["./app/images/**/*", "!./app/images/icons"])
+function watching() {
+  watch("./app/html/**/*.html", html).on("change", browserSync.reload);
+  watch("./app/scss/**/*.scss", styles);
+  watch("./app/js/**/*.js", scripts);
+  watch(["./app/images/**/*", "!./app/images/icons"], images).on(
+    "add",
+    browserSync.reload
+  );
+  watch("./app/fonts/**/*", fonts).on("add", browserSync.reload);
+}
+
+// TASKS FOR BUILD
+
+function serverDocs() {
+  browserSync.init({
+    server: {
+      baseDir: "./docs"
+    },
+    notify: false
+  });
+}
+
+function cleanDocs() {
+  return del("./docs");
+}
+
+function htmlDocs() {
+  return src("./app/html/*.html")
+    .pipe(gulpPlumber(gulpPlumberConfig))
+    .pipe(fileInclude({ prefix: "@@", basepath: "@file" }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest("./docs"));
+}
+
+function stylesDocs() {
+  return src("./app/scss/main.scss")
+    .pipe(gulpPlumber(gulpPlumberConfig))
+    .pipe(gulpSass({ outputStyle: "compressed" }))
+    .pipe(gulpAutoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+    .pipe(gulpConcat("main.min.css"))
+    .pipe(dest("./docs/css"));
+}
+
+function scriptsDocs() {
+  return src(["./node_modules/mixitup/dist/mixitup.js", "./app/js/main.js"])
+    .pipe(gulpPlumber(gulpPlumberConfig))
+    .pipe(gulpConcat("main.min.js"))
+    .pipe(gulpUglify())
+    .pipe(dest("./docs/js"));
+}
+
+function imagesDocs() {
+  return src(["./app/images/**/*", "!./app/images/icons/**/*"])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(
-      gulpImagemin([
-        gulpImagemin.gifsicle({ interlaced: true }),
-        gulpImagemin.mozjpeg({ quality: 75, progressive: true }),
-        gulpImagemin.optipng({ optimizationLevel: 5 }),
-        gulpImagemin.svgo({
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
         })
       ])
     )
-    .pipe(dest("./dist/images"));
+    .pipe(dest("./docs/images"));
 }
 
-function building() {
-  return src(
-    ["./app/*.html", "./app/css/styles.min.css", "./app/js/main.min.js"],
-    { base: "./app" }
-  ).pipe(dest("./dist"));
+function fontsDocs() {
+  return src("./app/fonts/**/*").pipe(dest("./docs/fonts"));
 }
 
-function watching() {
-  watch("./app/**/*.html").on("change", browserSync.reload);
-  watch("./app/scss/**/*.scss", styles);
-  watch(["./app/js/**/*.js", "!./app/js/main.min.js"], scripts);
-}
-
-exports.clean = cleanDist;
+exports.cleandist = cleanDist;
+exports.cleandocs = cleanDocs;
 exports.svg = svgSprite;
 
-exports.default = parallel(styles, scripts, server, watching);
+exports.default = series(
+  cleanDist,
+  parallel(html, styles, scripts, images, fonts),
+  parallel(server, watching)
+);
 
-exports.build = series(cleanDist, parallel(building, images));
+exports.docs = series(
+  cleanDocs,
+  parallel(htmlDocs, stylesDocs, scriptsDocs, imagesDocs, fontsDocs),
+  serverDocs
+);
