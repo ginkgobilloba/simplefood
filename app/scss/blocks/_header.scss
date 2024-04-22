@@ -10,11 +10,11 @@
   &.fixed {
     padding-top: 35px;
     padding-bottom: 35px;
-    background-color: rgba($secondary800, 0.7);
+    background-color: rgba($secondary-800, 0.7);
     backdrop-filter: blur(10px);
   }
 
-  &__container {
+  .container {
     display: flex;
     align-items: center;
   }
@@ -30,11 +30,10 @@
   &__list {
     display: flex;
     align-items: center;
+    column-gap: 45px;
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-right: 45px;
-    }
+  .link {
+    letter-spacing: normal;
   }
 }

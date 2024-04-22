@@ -26,6 +26,7 @@
     "sass": "^1.72.0"
   },
   "dependencies": {
-    "mixitup": "^3.3.1"
+    "mixitup": "^3.3.1",
+    "swiper": "^11.1.1"
   }
 }

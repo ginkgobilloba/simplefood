@@ -4,7 +4,7 @@
   transition: box-shadow 0.3s, opacity 0.3s;
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba($accent900, 0.7);
+    box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
   }
 
   &:hover {

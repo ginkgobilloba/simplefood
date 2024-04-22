@@ -1,0 +1,95 @@
+.reviews {
+  text-align: center;
+
+  .container {
+    max-width: 1020px;
+  }
+
+  .reviews-swiper {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 82px;
+    overflow: hidden;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    column-gap: 15px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $secondary-900;
+    cursor: pointer;
+    transition: box-shadow 0.3s, background-color 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $accent-900;
+    }
+
+    &:hover {
+      background-color: $accent-700;
+      box-shadow: 0 0 0 2px rgba($accent-800, 0.7);
+    }
+
+    &:active {
+      background-color: $accent-750;
+      box-shadow: none;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $accent-800;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    bottom: 5px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px currentColor;
+    outline: 2px solid transparent;
+    outline-offset: 3px;
+    color: $secondary-900;
+    transition: outline-color 0.3s, background-color, color 0.3s, box-shadow 0.3s;
+
+    &:focus {
+      outline-color: rgba($accent-900, 0.7);
+    }
+
+    &:hover {
+      background-color: $accent-700;
+      color: $accent-750;
+    }
+
+    &:active {
+      background-color: $accent-700;
+      box-shadow: 0 0 0 3px $accent-700;
+      color: $accent-800;
+    }
+  }
+
+  .swiper-button-prev {
+    right: calc(50% + 76px);
+  }
+
+  .swiper-button-next {
+    left: calc(50% + 76px);
+  }
+
+  .swiper-icon {
+    fill: currentColor;
+  }
+
+}

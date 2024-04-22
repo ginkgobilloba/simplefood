@@ -1,7 +1,8 @@
 .subscribe-email {
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
 
-  &__logo {
+  .logo {
     margin-bottom: 30px;
   }
 
@@ -14,7 +15,7 @@
     display: block;
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid $secondary900;
+    border: 1px solid $secondary-900;
     border-radius: 5px;
     background-color: $white;
     font-size: 14px;
@@ -23,12 +24,12 @@
     transition: outline-color 0.3s;
 
     &::placeholder {
-      color: $secondary900;
+      color: $secondary-900;
       transition: color 0.3s;
     }
 
     &:focus {
-      outline-color: $accent900;
+      outline-color: $accent-900;
     }
 
     &:hover {
@@ -44,27 +45,27 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
-    background-color: $accent900;
+    background-color: $accent-900;
     font-size: 14px;
     font-weight: 500;
     color: $white;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 
     &:focus {
-      background-color: rgba($accent800, 0.1);
-      box-shadow: 0 0 0 2px rgba($accent900, 0.7);
-      color: $accent900;
+      background-color: rgba($accent-800, 0.1);
+      box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
+      color: $accent-900;
     }
 
     &:hover {
       background-color: $white;
-      box-shadow: 0 0 0 2px rgba($accent900, 0.7);
-      color: $accent900;
+      box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
+      color: $accent-900;
     }
 
     &:active {
-      background-color: $accent700;
-      color: $accent900;
+      background-color: $accent-700;
+      color: $accent-900;
     }
   }
 

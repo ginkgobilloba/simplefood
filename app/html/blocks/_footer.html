@@ -1,10 +1,9 @@
 <footer class="footer">
-  <div class="footer__container container">
+  <div class="container">
 
     <div class="subscribe-email">
-      <a class="subscribe-email__logo logo" href="#">
-        <img class="logo__img" src="./images/logo.svg" width="200" height="39"
-          alt="Логотип сервиса доставки еды Симпл Фуд">
+      <a class="logo" href="#">
+        <img src="./images/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
       </a>
 
       <form class="subscribe-email__form" action="#">
@@ -16,7 +15,7 @@
         </label>
         <button class="subscribe-email__btn" type="submit">
           <svg class="subscribe-email__icon" width="17" height="16">
-            <use href="./images/icons.svg#telegram"></use>
+            <use href="./images/sprite.svg#telegram"></use>
           </svg>
           Подписаться
         </button>
@@ -24,74 +23,138 @@
     </div>
 
     <ul class="footer__list">
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Как это работает
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           О нас
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Скачать приложение
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Продукты
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Новости
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Блог
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Блюда
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Партнеры
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Что нового?
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Меню
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           ЧаВо
         </a>
       </li>
-      <li class="footer__item">
+      <li>
         <a class="link" href="#">
           Карта сайта
         </a>
       </li>
     </ul>
 
-    @@include("../components/_contacts.html")
+    <address class="contacts">
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <p class="contacts__location">
+            <svg class="contacts__icon" width="24" height="24">
+              <use href="./images/sprite.svg#location"></use>
+            </svg>
+            ул. Т.Г.Шевченко, 1
+          </p>
+        </li>
+
+        <li class="contacts__item">
+          <a class="contacts__link" href="tel:+380501112233">
+            <svg class="contacts__icon" width="24" height="24">
+              <use href="./images/sprite.svg#tel"></use>
+            </svg>
+            380501112233
+          </a>
+        </li>
+
+        <li class="contacts__item">
+          <a class="contacts__link" href="mailto:support@sfood.com">
+            <svg class="contacts__icon" width="24" height="24">
+              <use href="./images/sprite.svg#email"></use>
+            </svg>
+            support@sfood.com
+          </a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li>
+          <a class="social__link" href="#" target="_blank">
+            <span class="sr-only">
+              Фейсбук
+            </span>
+            <svg class="social__icon" width="21" height="21">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="social__link" href="#" target="_blank">
+            <span class="sr-only">
+              Твиттер
+            </span>
+            <svg class="social__icon" width="21" height="21">
+              <use href="./images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a class="social__link" href="#" target="_blank">
+            <span class="sr-only">
+              Инстаграм
+            </span>
+            <svg class="social__icon" width="21" height="21">
+              <use href="./images/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </address>
 
   </div>
 
   <div class="footer__copy">
-    <span class="footer__copy-text">
+    <span>
       © 2022 Simple Food
     </span>
   </div>

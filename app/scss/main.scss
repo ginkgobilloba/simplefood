@@ -1,6 +1,7 @@
 // BASE
 @import './base/fonts';
 @import './base/reset';
+@import './node_modules/swiper/swiper';
 @import './base/vars';
 @import './base/global';
 @import './base/typography';
@@ -12,11 +13,17 @@
 @import './components/product-card';
 @import './components/subscribe';
 @import './components/contacts';
+@import './components/restaurant-card';
+@import './components/review';
 
 // BLOCKS
 @import './blocks/header';
 @import './blocks/footer';
+@import './blocks/app';
 
 // HOME PAGE
 @import './home/hero';
 @import './home/popular';
+@import './home/features';
+@import './home/restaurants';
+@import './home/reviews';

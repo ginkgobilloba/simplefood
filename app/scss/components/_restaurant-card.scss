@@ -1,0 +1,67 @@
+.restaurant-card {
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $white;
+  box-shadow: 0 3px 3px rgba($black, 0.1);
+  outline: 2px solid transparent;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(7px);
+    box-shadow: 0 3px 15px rgba($accent-900, 0.5);
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1.23 / 1;
+  }
+
+  &__bottom {
+    padding: 15px 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__time {
+    position: relative;
+    z-index: 1;
+    margin-right: 30px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.66;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-image: url("../images/icons/time.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

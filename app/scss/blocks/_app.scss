@@ -1,0 +1,68 @@
+.app {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__box {
+    max-width: 540px;
+    width: 100%;
+    margin-right: 60px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    p {
+      line-height: 1.5;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &__link {
+    display: block;
+    height: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.3s, transform 0.3s, opacity 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
+    }
+
+    &:hover {
+      transform: translateY(3px);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &--appstore {
+      width: 120px;
+      border-radius: 7px;
+      background-image: url("../images/mobile-app/appstore.svg");
+    }
+
+    &--googleplay {
+      width: 135px;
+      border-radius: 5px;
+      background-image: url("../images/mobile-app/googleplay.svg");
+    }
+  }
+
+  &__img {
+    aspect-ratio: 570 / 380;
+    object-fit: cover;
+  }
+}

@@ -66,7 +66,11 @@ function styles() {
 }
 
 function scripts() {
-  return src(["./node_modules/mixitup/dist/mixitup.js", "./app/js/main.js"])
+  return src([
+    "./node_modules/mixitup/dist/mixitup.js",
+    "./node_modules/swiper/swiper-bundle.js",
+    "./app/js/main.js"
+  ])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(gulpConcat("main.min.js"))
     .pipe(dest("./dist/js"))
@@ -74,13 +78,13 @@ function scripts() {
 }
 
 function images() {
-  return src(["./app/images/**/*", "!./app/images/icons/**/*"]).pipe(
+  return src(["./app/images/**/*", "!./app/images/icons/sprite/**/*"]).pipe(
     dest("./dist/images")
   );
 }
 
 function svgSprite() {
-  return src("./app/images/icons/**/*.svg")
+  return src("./app/images/icons/sprite/**/*.svg")
     .pipe(gulpSvgstore())
     .pipe(dest("./app/images"));
 }
@@ -93,7 +97,7 @@ function watching() {
   watch("./app/html/**/*.html", html).on("change", browserSync.reload);
   watch("./app/scss/**/*.scss", styles);
   watch("./app/js/**/*.js", scripts);
-  watch(["./app/images/**/*", "!./app/images/icons"], images).on(
+  watch(["./app/images/**/*", "!./app/images/icons/sprite"], images).on(
     "add",
     browserSync.reload
   );
@@ -102,14 +106,14 @@ function watching() {
 
 // TASKS FOR BUILD
 
-function serverDocs() {
-  browserSync.init({
-    server: {
-      baseDir: "./docs"
-    },
-    notify: false
-  });
-}
+// function serverDocs() {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./docs"
+//     },
+//     notify: false
+//   });
+// }
 
 function cleanDocs() {
   return del("./docs");
@@ -141,7 +145,7 @@ function scriptsDocs() {
 }
 
 function imagesDocs() {
-  return src(["./app/images/**/*", "!./app/images/icons/**/*"])
+  return src(["./app/images/**/*", "!./app/images/icons/sprite/**/*"])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(
       imagemin([
@@ -172,6 +176,5 @@ exports.default = series(
 
 exports.docs = series(
   cleanDocs,
-  parallel(htmlDocs, stylesDocs, scriptsDocs, imagesDocs, fontsDocs),
-  serverDocs
+  parallel(htmlDocs, stylesDocs, scriptsDocs, imagesDocs, fontsDocs)
 );

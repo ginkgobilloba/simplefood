@@ -1,7 +1,7 @@
 .product-card {
   height: 100%;
   padding: 20px 15px;
-  border: 1px solid $secondary800;
+  border: 1px solid $secondary-800;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   transition: border-color 0.3s;
 
   &:hover {
-    border-color: $accent900;
+    border-color: $accent-900;
   }
 
   &__link {
@@ -23,7 +23,7 @@
     margin-bottom: 10px;
 
     &:focus .product-card__descr {
-      color: $accent900;
+      color: $accent-900;
     }
 
     &:hover .product-card__img {
@@ -31,13 +31,14 @@
     }
 
     &:active .product-card__descr {
-      color: $accent900;
+      color: $accent-900;
       text-shadow: 2px 2px 5px currentColor;
     }
   }
 
   &__img {
     margin-bottom: 10px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: transform 0.3s;
   }

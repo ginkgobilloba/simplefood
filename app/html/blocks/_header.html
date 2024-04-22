@@ -1,27 +1,26 @@
 <header class="header" id="header">
-  <div class="header__container container">
+  <div class="container">
     <nav class="header__nav">
 
       <a class="logo" href="#">
-        <img class="logo__img" src="./images/logo.svg" width="200" height="39"
-          alt="Логотип сервиса доставки еды Симпл Фуд">
+        <img src="./images/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
       </a>
 
       <ul class="header__list">
-        <li class="header__item">
-          <a href="#" class="link link--header @@if (currentPage === 'home') {current}">
+        <li>
+          <a href="#" class="link @@if (currentPage === 'home') {current}">
             Главная
           </a>
         </li>
 
-        <li class="header__item">
-          <a href="#" class="link link--header @@if (currentPage === 'products') {current}">
+        <li>
+          <a href="#" class="link @@if (currentPage === 'products') {current}">
             Блюда
           </a>
         </li>
 
-        <li class="header__item">
-          <a href="#" class="link link--header @@if (currentPage === 'contacts') {current}">
+        <li>
+          <a href="#" class="link @@if (currentPage === 'contacts') {current}">
             Контакты
           </a>
         </li>
@@ -36,7 +35,7 @@
           Поиск по сайту
         </span>
         <svg class="user-nav__icon" width="19" height="19">
-          <use href="./images/icons.svg#search"></use>
+          <use href="./images/sprite.svg#search"></use>
         </svg>
       </button>
 
@@ -48,7 +47,7 @@
           4
         </span>
         <svg class="user-nav__icon" width="19" height="19">
-          <use href="./images/icons.svg#cart"></use>
+          <use href="./images/sprite.svg#cart"></use>
         </svg>
       </button>
 
