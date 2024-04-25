@@ -90,6 +90,14 @@
     &:hover {
       box-shadow: 0 5px 12px rgba($accent-900, 0.2);
     }
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      font-size: 14px;
+    }
   }
 
   &--icon {

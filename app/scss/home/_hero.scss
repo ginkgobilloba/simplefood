@@ -3,6 +3,8 @@
   padding-top: 158px;
 
   .container {
+    position: relative;
+    z-index: 1;
     height: 100%;
     display: flex;
     align-items: center;
@@ -10,10 +12,33 @@
     background-origin: content-box;
     background-position: 100% 50%;
     background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: $xl) {
+        background-color: rgba($secondary-700, 0.85)
+      }
+
+    }
   }
 
   &__content {
     max-width: 450px;
+
+    @media (max-width: $sm) {
+      max-width: 345px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      max-width: 345px;
+    }
   }
 
   &__title {
@@ -22,6 +47,16 @@
     font-weight: 500;
     text-transform: uppercase;
     color: $accent-900;
+
+    @media (max-width: $sm) {
+      max-width: 257px;
+      font-size: 40px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      max-width: 257px;
+      font-size: 40px;
+    }
   }
 
   &__title-decor {
@@ -44,5 +79,45 @@
     display: flex;
     align-items: center;
     column-gap: 34px;
+
+    @media (max-width: $sm) {
+      column-gap: 30px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      column-gap: 30px;
+    }
+  }
+
+  .primary-btn {
+    @media (max-width: $sm) {
+      padding: 8px 24px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      padding: 8px 24px;
+    }
+  }
+
+  .showmore-link {
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: $lg) {
+    padding-top: 114px;
+  }
+
+  @media (max-width: $md) {
+    padding-top: 92px;
+  }
+
+  @media (max-width: $lg) and (orientation: landscape) {
+    padding-top: 58px;
   }
 }

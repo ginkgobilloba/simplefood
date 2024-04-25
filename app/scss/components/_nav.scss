@@ -1,0 +1,47 @@
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+
+    &--mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px 0;
+    }
+
+    @media (max-width: $lg) {
+      column-gap: 30px;
+    }
+  }
+
+  &--desktop {
+    margin-right: 50px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .link {
+      letter-spacing: normal;
+    }
+
+    @media (max-width: $lg) {
+      margin-right: 40px;
+    }
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: block;
+    margin-right: 0;
+
+    .link {
+      display: block;
+    }
+  }
+}

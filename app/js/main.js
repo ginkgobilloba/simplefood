@@ -15,6 +15,29 @@ document.addEventListener("scroll", function () {
   }
 });
 
+// Mobile menu
+
+const body = document.querySelector("body");
+const burgerOpen = document.querySelector("#burgerOpen");
+const burgerClose = document.querySelector("#burgerClose");
+
+burgerOpen.addEventListener("click", function () {
+  header.classList.add("mobile");
+  body.classList.add("fixed");
+});
+
+burgerClose.addEventListener("click", function () {
+  header.classList.remove("mobile");
+  body.classList.remove("fixed");
+});
+
+window.addEventListener("resize", function () {
+  if (!window.matchMedia("(max-width: 768px)").matches) {
+    header.classList.remove("mobile");
+    body.classList.remove("fixed");
+  }
+});
+
 // Mixitup
 
 const mixer = mixitup(".popular__list", {

@@ -14,4 +14,14 @@
   &:active {
     opacity: 0.5;
   }
+
+  &--header {
+    @media (max-width: $md) {
+      max-width: 115px;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      max-width: 115px;
+    }
+  }
 }

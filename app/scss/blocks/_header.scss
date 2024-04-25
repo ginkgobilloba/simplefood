@@ -5,35 +5,82 @@
   top: 0;
   left: 0;
   width: 100%;
-  transition: background-color 0.3s, padding-top 0.3s, padding-bottom 0.3s;
+  transition: padding-top 0.3s, padding-bottom 0.3s;
 
-  &.fixed {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    background-color: rgba($secondary-800, 0.7);
-    backdrop-filter: blur(10px);
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba($black, 0.5);
+    transition: visibility 0.3s, opacity 0.3s;
   }
 
   .container {
-    display: flex;
-    align-items: center;
-  }
-
-  &__nav {
-    margin-right: 50px;
-    flex-grow: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__list {
-    display: flex;
-    align-items: center;
-    column-gap: 45px;
+  @media (max-width: $lg) {
+    padding: 35px 0;
   }
 
-  .link {
-    letter-spacing: normal;
+  @media (max-width: $md) {
+    padding: 24px 0;
+  }
+
+  @media (max-width: $lg) and (orientation: landscape) {
+    padding: 7px 0;
+  }
+
+  &.fixed {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &::before {
+      background-color: rgba($secondary-800, 0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: $lg) {
+      padding: 15px 0;
+    }
+
+    @media (max-width: $md) {
+      padding: 7px 0;
+    }
+
+    @media (max-width: $lg) and (orientation: landscape) {
+      padding: 7px 0;
+    }
+  }
+
+  &.mobile {
+
+    &::after {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .mobile-menu {
+      transform: translate(0);
+    }
   }
 }

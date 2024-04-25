@@ -1,12 +1,10 @@
 <header class="header" id="header">
   <div class="container">
-    <nav class="header__nav">
 
-      <a class="logo" href="#">
-        <img src="./images/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
-      </a>
+    @@include("../components/_logo.html", {modifier: "logo--header"})
 
-      <ul class="header__list">
+    <nav class="nav nav--desktop">
+      <ul class="nav__list">
         <li>
           <a href="#" class="link @@if (currentPage === 'home') {current}">
             Главная
@@ -25,11 +23,9 @@
           </a>
         </li>
       </ul>
-
     </nav>
 
     <div class="user-nav">
-
       <button class="user-nav__btn" type="button">
         <span class="sr-only">
           Поиск по сайту
@@ -50,7 +46,57 @@
           <use href="./images/sprite.svg#cart"></use>
         </svg>
       </button>
-
     </div>
+
+    <button class="burger" type="button" id="burgerOpen">
+      <span class="sr-only">
+        Показать мобильное меню
+      </span>
+      <span class="burger__line"></span>
+    </button>
+
+  </div>
+
+  <div class="mobile-menu">
+
+    <div class="mobile-menu__box">
+      @@include("../components/_logo.html", {modifier: ""})
+
+      <button class="burger burger--close" type="button" id="burgerClose">
+        <span class="sr-only">
+          Скрыть мобильное меню
+        </span>
+      </button>
+    </div>
+
+    <div class="mobile-menu__box">
+      <nav class="nav nav--mobile">
+        <ul class="nav__list nav__list--mobile">
+          <li>
+            <a href="#" class="link @@if (currentPage === 'home') {current}">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link @@if (currentPage === 'products') {current}">
+              Блюда
+            </a>
+          </li>
+          <li>
+            <a href="#" class="link @@if (currentPage === 'contacts') {current}">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile-menu__box">
+      @@include("../components/_contacts.html", {modifier: "contacts--header"})
+    </div>
+
   </div>
 </header>
+
+
+<script src="./js/main.min.js"></script>
