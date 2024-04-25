@@ -78,13 +78,13 @@ function scripts() {
 }
 
 function images() {
-  return src(["./app/images/**/*", "!./app/images/icons/sprite/**/*"]).pipe(
+  return src(["./app/images/**/*", "!./app/images/icons/**/*"]).pipe(
     dest("./dist/images")
   );
 }
 
 function svgSprite() {
-  return src("./app/images/icons/sprite/**/*.svg")
+  return src("./app/images/icons/**/*.svg")
     .pipe(gulpSvgstore())
     .pipe(dest("./app/images"));
 }
@@ -97,7 +97,7 @@ function watching() {
   watch("./app/html/**/*.html", html).on("change", browserSync.reload);
   watch("./app/scss/**/*.scss", styles);
   watch("./app/js/**/*.js", scripts);
-  watch(["./app/images/**/*", "!./app/images/icons/sprite"], images).on(
+  watch(["./app/images/**/*", "!./app/images/icons"], images).on(
     "add",
     browserSync.reload
   );
@@ -145,7 +145,7 @@ function scriptsDocs() {
 }
 
 function imagesDocs() {
-  return src(["./app/images/**/*", "!./app/images/icons/sprite/**/*"])
+  return src(["./app/images/**/*", "!./app/images/icons/**/*"])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(
       imagemin([
