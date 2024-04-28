@@ -1,9 +1,44 @@
 .restaurants {
   text-align: center;
 
-  &__list {
+  .restaurants-swiper {
+
+    @media (max-width: $md) {
+      overflow: hidden;
+    }
+  }
+
+  .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @media (max-width: $xl) {
+      grid-template-columns: repeat(2, minmax(auto, 370px));
+      justify-content: center;
+    }
+
+    @media (max-width: $md) {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: stretch;
+      gap: 0;
+    }
+  }
+
+  .swiper-slide {
+
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .pagination {
+    display: none;
+
+    @media (max-width: $md) {
+      display: flex;
+    }
   }
 }

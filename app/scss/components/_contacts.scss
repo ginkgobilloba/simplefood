@@ -10,22 +10,33 @@
     }
   }
 
-  &__location {
+  &__location,
+  &__link {
     display: flex;
     align-items: center;
     font-size: 16px;
     line-height: 2;
-    color: $main;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-right: 7px;
+      flex-shrink: 0;
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: currentColor;
+    }
   }
 
-  &__icon {
-    margin-right: 7px;
-    fill: none;
-    stroke: currentColor;
+  &__location {
+    &::before {
+      mask-image: url("../images/sprite.svg#location");
+    }
   }
 
   &__link {
-    @extend .contacts__location;
     border-radius: 5px;
     transition: box-shadow 0.3s, color 0.3s, text-shadow 0.3s;
 
@@ -39,6 +50,18 @@
 
     &:active {
       text-shadow: 2px 2px 5px rgba($main, 0.5);
+    }
+
+    &--tel {
+      &::before {
+        mask-image: url("../images/sprite.svg#tel");
+      }
+    }
+
+    &--email {
+      &::before {
+        mask-image: url("../images/sprite.svg#email");
+      }
     }
   }
 }
@@ -57,6 +80,16 @@
     background-color: $secondary-800;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 
+    &::before {
+      content: "";
+      width: 21px;
+      height: 21px;
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: currentColor;
+    }
+
     &:focus {
       background-color: $accent-700;
       box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
@@ -71,9 +104,23 @@
       background-color: $accent-700;
       color: $accent-800;
     }
-  }
 
-  &__icon {
-    fill: currentColor;
+    &--facebook {
+      &::before {
+        mask-image: url("../images/sprite.svg#facebook");
+      }
+    }
+
+    &--twitter {
+      &::before {
+        mask-image: url("../images/sprite.svg#twitter");
+      }
+    }
+
+    &--instagram {
+      &::before {
+        mask-image: url("../images/sprite.svg#instagram");
+      }
+    }
   }
 }

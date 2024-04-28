@@ -1,46 +1,33 @@
 <section class="popular section">
   <div class="container">
+
     <h2 class="title">
       Популярные категории
     </h2>
-    <ul class="popular__filter">
-      <li class="popular__filter-item">
-        <button class="popular__filter-btn" type="button" data-filter="all">
-          <svg class="popular__filter-icon" width="44" height="44">
-            <use href="./images/sprite.svg#burgers"></use>
-          </svg>
+
+    <ul class="filter">
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--burgers" type="button" data-filter="all">
           Бургеры
         </button>
       </li>
-      <li class="popular__filter-item">
-        <button class="popular__filter-btn" type="button" data-filter=".category-a">
-          <svg class="popular__filter-icon" width="44" height="44">
-            <use href="./images/sprite.svg#pizza"></use>
-          </svg>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--pizza" type="button" data-filter=".category-a">
           Пицца
         </button>
       </li>
-      <li class="popular__filter-item">
-        <button class="popular__filter-btn" type="button" data-filter=".category-b">
-          <svg class="popular__filter-icon" width="44" height="44">
-            <use href="./images/sprite.svg#sandwiches"></use>
-          </svg>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--sandwiches" type="button" data-filter=".category-b">
           Сендвичи
         </button>
       </li>
-      <li class="popular__filter-item">
-        <button class="popular__filter-btn" type="button" data-filter=".category-c">
-          <svg class="popular__filter-icon" width="44" height="44">
-            <use href="./images/sprite.svg#asian"></use>
-          </svg>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--asian" type="button" data-filter=".category-c">
           Азиатская кухня
         </button>
       </li>
-      <li class="popular__filter-item">
-        <button class="popular__filter-btn" type="button" data-filter=".category-d">
-          <svg class="popular__filter-icon" width="44" height="44">
-            <use href="./images/sprite.svg#sets"></use>
-          </svg>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--sets" type="button" data-filter=".category-d">
           Cеты
         </button>
       </li>
@@ -50,11 +37,8 @@
       <li class="mix category-a">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/01.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/01.png" alt="Чизбургер с листьями салата"
-                width="140" height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/01.webp" alt="Чизбургер с листьями салата" width="140"
+              height="140" loading="lazy">
             <h3 class="product-card__descr">
               Чизбургер с листьями салата
             </h3>
@@ -76,10 +60,8 @@
       <li class="mix category-a">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/02.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/02.jpg" alt="Бифбургер" width="140" height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/02.webp" alt="Бифбургер" width="140" height="140"
+              loading="lazy">
             <h3 class="product-card__descr">
               Бифбургер
             </h3>
@@ -101,11 +83,8 @@
       <li class="mix category-b">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/03.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/03.jpg" alt="Королевский чизбургер" width="140"
-                height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/03.webp" alt="Королевский чизбургер" width="140"
+              height="140" loading="lazy">
             <h3 class="product-card__descr">
               Королевский чизбургер
             </h3>
@@ -127,11 +106,8 @@
       <li class="mix category-b">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/04.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/04.jpg" alt="Черный гамбургер" width="140"
-                height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/04.webp" alt="Черный гамбургер" width="140"
+              height="140" loading="lazy">
             <h3 class="product-card__descr">
               Черный гамбургер
             </h3>
@@ -153,10 +129,8 @@
       <li class="mix category-c">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/05.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/05.jpg" alt="Чикен бургер" width="140" height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/05.webp" alt="Чикен бургер" width="140" height="140"
+              loading="lazy">
             <h3 class="product-card__descr">
               Чикен бургер
             </h3>
@@ -178,11 +152,8 @@
       <li class="mix category-c">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/01.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/01.jpg" alt="Чизбургер с листьями салата"
-                width="140" height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/01.webp" alt="Чизбургер с листьями салата" width="140"
+              height="140" loading="lazy">
             <h3 class="product-card__descr">
               Чизбургер с листьями салата
             </h3>
@@ -204,10 +175,8 @@
       <li class="mix category-d">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/02.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/02.jpg" alt="Бифбургер" width="140" height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/02.webp" alt="Бифбургер" width="140" height="140"
+              loading="lazy">
             <h3 class="product-card__descr">
               Бифбургер
             </h3>
@@ -229,11 +198,8 @@
       <li class="mix category-d">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/03.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/03.jpg" alt="Королевский чизбургер" width="140"
-                height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/03.webp" alt="Королевский чизбургер" width="140"
+              height="140" loading="lazy">
             <h3 class="product-card__descr">
               Королевский чизбургер
             </h3>
@@ -255,11 +221,8 @@
       <li class="mix category-d">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/04.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/04.jpg" alt="Черный гамбургер" width="140"
-                height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/04.webp" alt="Черный гамбургер" width="140"
+              height="140" loading="lazy">
             <h3 class="product-card__descr">
               Черный гамбургер
             </h3>
@@ -281,10 +244,8 @@
       <li class="mix category-d">
         <article class="product-card">
           <a class="product-card__link" href="#">
-            <picture>
-              <source srcset="./images/products/05.webp" type="image/webp">
-              <img class="product-card__img" src="./images/products/05.jpg" alt="Чикен бургер" width="140" height="140">
-            </picture>
+            <img class="product-card__img" src="./images/products/05.webp" alt="Чикен бургер" width="140" height="140"
+              loading="lazy">
             <h3 class="product-card__descr">
               Чикен бургер
             </h3>
@@ -307,5 +268,6 @@
     <a class="showmore-link" href="#">
       Показать еще
     </a>
+
   </div>
 </section>

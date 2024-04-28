@@ -19,7 +19,7 @@
       mask-size: contain;
       mask-position: center;
       mask-repeat: no-repeat;
-      background-color: red;
+      background-color: currentColor;
     }
 
     &:focus {
@@ -30,21 +30,11 @@
     &:hover {
       background-color: $accent-800;
       color: $white;
-
-      .user-nav__btn-counter {
-        background-color: $white;
-        color: $accent-800;
-      }
     }
 
     &:active {
       background-color: $accent-700;
       color: $auxillary;
-
-      .user-nav__btn-counter {
-        background-color: $accent-900;
-        color: $white;
-      }
     }
 
     &:not(:last-child) {
@@ -53,15 +43,30 @@
 
     &--search {
       &::before {
-        mask-image: url("../images/icons.svg#search");
-
+        mask-image: url("../images/sprite.svg#search");
       }
-
-      // background-image: url("../images/icons.svg#search");
     }
 
     &--cart {
       position: relative;
+
+      &::before {
+        mask-image: url("../images/sprite.svg#cart");
+      }
+
+      &:hover {
+        .user-nav__btn-counter {
+          background-color: $white;
+          color: $accent-800;
+        }
+      }
+
+      &:active {
+        .user-nav__btn-counter {
+          background-color: $accent-900;
+          color: $white;
+        }
+      }
     }
   }
 
@@ -79,10 +84,6 @@
     color: $white;
     background-color: $accent-900;
     transition: background-color 0.3s, color 0.3s;
-  }
-
-  &__icon {
-    stroke: currentColor;
   }
 
   @media (max-width: $md) {

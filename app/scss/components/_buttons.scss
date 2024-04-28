@@ -47,6 +47,14 @@
     text-decoration-color: transparent;
     text-shadow: 2px 2px 5px rgba($auxillary, 0.5);
   }
+
+  @media (max-width: $sm) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $lg) and (orientation: landscape) {
+    font-size: 16px;
+  }
 }
 
 .primary-btn {
@@ -77,11 +85,6 @@
     color: $accent-900;
   }
 
-  &__icon {
-    fill: currentColor;
-    transition: transform 0.3s ease-in-out;
-  }
-
   &--big {
     padding: 12px 32px;
     font-size: 18px;
@@ -92,24 +95,39 @@
     }
 
     @media (max-width: $sm) {
+      padding: 8px 24px;
       font-size: 14px;
     }
 
     @media (max-width: $lg) and (orientation: landscape) {
+      padding: 8px 24px;
       font-size: 14px;
     }
   }
 
   &--icon {
     width: 79px;
-    padding: 5px 0;
+    padding: 10px 0;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
 
+    &::before {
+      content: "";
+      width: 14px;
+      height: 12px;
+      mask-image: url("../images/sprite.svg#arrow-right");
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: currentColor;
+      transition: transform 0.3s ease-in-out;
+    }
+
     &:hover {
-      .primary-btn__icon {
+      &::before {
         transform: translateX(20px);
       }
     }

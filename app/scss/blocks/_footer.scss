@@ -4,13 +4,29 @@
     margin-bottom: 60px;
     display: flex;
     column-gap: 70px;
+
+    @media (max-width: $xl) {
+      margin-bottom: 30px;
+      flex-direction: column;
+      gap: 30px 0;
+    }
   }
 
   &__list {
-    align-self: flex-start;
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 16px 70px;
+    align-content: start;
+    align-items: center;
+
+    .link {
+      display: block;
+    }
+
+    @media (max-width: $xl) {
+      order: 1;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__copy {
@@ -18,5 +34,10 @@
     border-top: 1px solid $secondary-900;
     font-size: 14px;
     text-align: center;
+    background-color: $white;
+
+    @media (max-width: $xl) {
+      padding: 20px 0;
+    }
   }
 }

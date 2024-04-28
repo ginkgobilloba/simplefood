@@ -41,8 +41,9 @@
 
   &__btn {
     width: 100%;
-    padding: 13px 38px;
+    padding: 13px;
     display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 5px;
     background-color: $accent-900;
@@ -50,6 +51,19 @@
     font-weight: 500;
     color: $white;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+
+    &::before {
+      content: "";
+      width: 17px;
+      height: 16px;
+      flex-shrink: 0;
+      margin-right: 15px;
+      mask-image: url("../images/sprite.svg#subscribe");
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: currentColor;
+    }
 
     &:focus {
       background-color: rgba($accent-800, 0.1);
@@ -67,10 +81,5 @@
       background-color: $accent-700;
       color: $accent-900;
     }
-  }
-
-  &__icon {
-    margin-right: 15px;
-    fill: currentColor;
   }
 }

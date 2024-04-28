@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:3000/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/images/favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="http://localhost:3000/images/favicon/favicon.ico">
+
+  <title>Сервис доставки еды Симпл Фуд | Главная</title>
+
+  <link rel="stylesheet" href="./Сервис доставки еды Симпл Фуд _ Главная_files/main.min.css">
+</head>
+
+<body><script id="__bs_script__">//<![CDATA[
+  (function() {
+    try {
+      var script = document.createElement('script');
+      if ('async') {
+        script.async = true;
+      }
+      script.src = '/browser-sync/browser-sync-client.js?v=3.0.2'.replace("HOST", location.hostname);
+      if (document.body) {
+        document.body.appendChild(script);
+      } else if (document.head) {
+        document.head.appendChild(script);
+      }
+    } catch (e) {
+      console.error("Browsersync: could not append script tag", e);
+    }
+  })()
+//]]></script><script async="" src="./Сервис доставки еды Симпл Фуд _ Главная_files/browser-sync-client.js.Без названия"></script>
+
+
+  <header class="header" id="header">
+  <div class="container">
+
+    <a class="logo logo--header" href="http://localhost:3000/#" style="
+    margin-right: 20px;
+">
+  <img src="./Сервис доставки еды Симпл Фуд _ Главная_files/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
+</a>
+
+    <nav class="nav nav--desktop">
+      <ul class="nav__list">
+        <li>
+          <a href="http://localhost:3000/#" class="link current">
+            Главная
+          </a>
+        </li>
+
+        <li>
+          <a href="http://localhost:3000/#" class="link ">
+            Блюда
+          </a>
+        </li>
+
+        <li>
+          <a href="http://localhost:3000/#" class="link ">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="user-nav">
+      <button class="user-nav__btn user-nav__btn--search" type="button">
+        <span class="sr-only">
+          Поиск по сайту
+        </span>
+      </button>
+
+      <button class="user-nav__btn user-nav__btn--cart" type="button">
+        <span class="sr-only">
+          Корзина товаров. Цифра показывает количество товаров в корзине
+        </span>
+        <span class="user-nav__btn-counter">
+          4
+        </span>
+      </button>
+    </div>
+
+    <button class="burger" type="button" id="burgerOpen">
+      <span class="sr-only">
+        Показать мобильное меню
+      </span>
+      <span class="burger__line"></span>
+    </button>
+
+  </div>
+
+  <div class="mobile-menu">
+
+    <div class="mobile-menu__box">
+      <a class="logo " href="http://localhost:3000/#">
+  <img src="./Сервис доставки еды Симпл Фуд _ Главная_files/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
+</a>
+
+      <button class="burger burger--close" type="button" id="burgerClose">
+        <span class="sr-only">
+          Скрыть мобильное меню
+        </span>
+      </button>
+    </div>
+
+    <div class="mobile-menu__box">
+      <nav class="nav nav--mobile">
+        <ul class="nav__list nav__list--mobile">
+          <li>
+            <a href="http://localhost:3000/#" class="link current">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/#" class="link ">
+              Блюда
+            </a>
+          </li>
+          <li>
+            <a href="http://localhost:3000/#" class="link ">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile-menu__box">
+      <address class="contacts contacts--header">
+  <ul class="contacts__list">
+    <li class="contacts__item">
+      <p class="contacts__location">
+        ул. Т.Г.Шевченко, 1
+      </p>
+    </li>
+
+    <li class="contacts__item">
+      <a class="contacts__link contacts__link--tel" href="tel:+380501112233">
+        380501112233
+      </a>
+    </li>
+
+    <li class="contacts__item">
+      <a class="contacts__link contacts__link--email" href="mailto:support@sfood.com">
+        support@sfood.com
+      </a>
+    </li>
+  </ul>
+
+  <ul class="social">
+    <li>
+      <a class="social__link social__link--facebook" href="http://localhost:3000/#" target="_blank">
+        <span class="sr-only">
+          Фейсбук
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="social__link social__link--twitter" href="http://localhost:3000/#" target="_blank">
+        <span class="sr-only">
+          Твиттер
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="social__link social__link--instagram" href="http://localhost:3000/#" target="_blank">
+        <span class="sr-only">
+          Инстаграм
+        </span>
+      </a>
+    </li>
+  </ul>
+</address>
+    </div>
+
+  </div>
+</header>
+
+  <main class="main">
+
+    <h1 class="sr-only">
+      Сервис доставки еды Симпл Фуд
+    </h1>
+
+    <section class="hero section">
+  <div class="container" style="background-image: url(&#39;./images/scooter.webp&#39;);">
+    <div class="hero__content">
+
+      <h2 class="hero__title">
+        <span class="hero__title-decor">
+          Доставка
+        </span>
+        за 15 минут
+      </h2>
+
+      <div class="hero__text">
+        <p>
+          Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+        </p>
+      </div>
+
+      <ul class="hero__list">
+        <li>
+          <a class="primary-btn primary-btn--big" href="http://localhost:3000/#">
+            Заказать
+          </a>
+        </li>
+
+        <li>
+          <a class="showmore-link" href="http://localhost:3000/#">
+            Подробнее
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+    <section class="popular section">
+  <div class="container">
+
+    <h2 class="title">
+      Популярные категории
+    </h2>
+
+    <ul class="filter">
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--burgers mixitup-control-active" type="button" data-filter="all">
+          Бургеры
+        </button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--pizza" type="button" data-filter=".category-a">
+          Пицца
+        </button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--sandwiches" type="button" data-filter=".category-b">
+          Сендвичи
+        </button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--asian" type="button" data-filter=".category-c">
+          Азиатская кухня
+        </button>
+      </li>
+      <li class="filter__item">
+        <button class="filter__btn filter__btn--sets" type="button" data-filter=".category-d">
+          Cеты
+        </button>
+      </li>
+    </ul>
+
+    <ul class="popular__list" id="MixItUp842B55">
+      <li class="mix category-a">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01.webp" alt="Чизбургер с листьями салата" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Чизбургер с листьями салата
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                160
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-a">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/02.webp" alt="Бифбургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Бифбургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                190
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-b">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/03.webp" alt="Королевский чизбургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Королевский чизбургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                260
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-b">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/04.webp" alt="Черный гамбургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Черный гамбургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                199
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-c">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/05.webp" alt="Чикен бургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Чикен бургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                180
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-c">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01.webp" alt="Чизбургер с листьями салата" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Чизбургер с листьями салата
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                160
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-d">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/02.webp" alt="Бифбургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Бифбургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                190
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-d">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/03.webp" alt="Королевский чизбургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Королевский чизбургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                260
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-d">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/04.webp" alt="Черный гамбургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Черный гамбургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                199
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+
+      <li class="mix category-d">
+        <article class="product-card">
+          <a class="product-card__link" href="http://localhost:3000/#">
+            <img class="product-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/05.webp" alt="Чикен бургер" width="140" height="140" loading="lazy">
+            <h3 class="product-card__descr">
+              Чикен бургер
+            </h3>
+            <span class="product-card__price">
+              <span class="product-card__cost">
+                180
+              </span>
+              <span class="currency">
+                грн.
+              </span>
+            </span>
+          </a>
+          <button class="primary-btn" type="button">
+            В корзину
+          </button>
+        </article>
+      </li>
+    </ul>
+
+    <a class="showmore-link" href="http://localhost:3000/#">
+      Показать еще
+    </a>
+
+  </div>
+</section>
+
+    <section class="features section">
+  <div class="container" style="background-image: url(&#39;./images/delivery.webp&#39;);">
+    <div class="features__content">
+      <h2 class="title">
+        Оставайтесь дома,
+        а мы позаботимся о еде
+      </h2>
+      <div class="features__text">
+        <p>
+          У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и
+          получите скидку!
+        </p>
+      </div>
+      <ul class="features__list">
+        <li class="features__item features__item--timer ">
+          Быстрая доставка за 15 минут
+        </li>
+        <li class="features__item features__item--delivery">
+          Вежливые курьеры
+        </li>
+        <li class="features__item features__item--restaurant">
+          Более 500 заведений
+        </li>
+      </ul>
+      <a class="primary-btn primary-btn--big" href="http://localhost:3000/#">
+        Подробнее
+      </a>
+    </div>
+  </div>
+</section>
+
+    <section class="restaurants section">
+  <div class="container">
+    <h2 class="title">
+      Лучшие рестораны
+    </h2>
+
+    <div class="restaurants-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+      <ul class="swiper-wrapper" id="swiper-wrapper-a21e988f22c28fcd" aria-live="polite">
+        <li class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" data-swiper-slide-index="0" style="width: 692px;">
+          <article class="restaurant-card">
+            <img class="restaurant-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01(1).webp" alt="Блейз Пицца" width="370" height="300" loading="lazy">
+
+            <div class="restaurant-card__bottom">
+              <h3 class="restaurant-card__title" lang="en">
+                Blaze Pizza
+              </h3>
+
+              <div class="restaurant-card__box">
+                <span class="restaurant-card__time">
+                  11:00 - 22:00
+                </span>
+
+                <a class="primary-btn primary-btn--icon" href="http://localhost:3000/#">
+                  <span class="sr-only">
+                    Перейти на страницу ресторана
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" data-swiper-slide-index="1" style="width: 692px;">
+          <article class="restaurant-card">
+            <img class="restaurant-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/02(1).webp" alt="Пицца Ранчо" width="370" height="300" loading="lazy">
+
+            <div class="restaurant-card__bottom">
+              <h3 class="restaurant-card__title" lang="en">
+                Pizza Runcho
+              </h3>
+
+              <div class="restaurant-card__box">
+                <span class="restaurant-card__time">
+                  12:00 - 21:00
+                </span>
+
+                <a class="primary-btn primary-btn--icon" href="http://localhost:3000/#">
+                  <span class="sr-only">
+                    Перейти на страницу ресторана
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="swiper-slide" role="group" aria-label="3 / 6" data-swiper-slide-index="2" style="width: 692px;">
+          <article class="restaurant-card">
+            <img class="restaurant-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/03(1).webp" alt="Пицца Хат" width="370" height="300" loading="lazy">
+
+            <div class="restaurant-card__bottom">
+              <h3 class="restaurant-card__title" lang="en">
+                Pizza Hut
+              </h3>
+
+              <div class="restaurant-card__box">
+                <span class="restaurant-card__time">
+                  11:00 - 22:00
+                </span>
+
+                <a class="primary-btn primary-btn--icon" href="http://localhost:3000/#">
+                  <span class="sr-only">
+                    Перейти на страницу ресторана
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="swiper-slide" role="group" aria-label="4 / 6" data-swiper-slide-index="3" style="width: 692px;">
+          <article class="restaurant-card">
+            <img class="restaurant-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/04(1).webp" alt="Мак Дональдс" width="370" height="300" loading="lazy">
+
+            <div class="restaurant-card__bottom">
+              <h3 class="restaurant-card__title" lang="en">
+                McDonald`s
+              </h3>
+
+              <div class="restaurant-card__box">
+                <span class="restaurant-card__time">
+                  06:00 - 23:00
+                </span>
+
+                <a class="primary-btn primary-btn--icon" href="http://localhost:3000/#">
+                  <span class="sr-only">
+                    Перейти на страницу ресторана
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="swiper-slide" role="group" aria-label="5 / 6" data-swiper-slide-index="4" style="width: 692px;">
+          <article class="restaurant-card">
+            <img class="restaurant-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/05(1).webp" alt="КФС" width="370" height="300" loading="lazy">
+
+            <div class="restaurant-card__bottom">
+              <h3 class="restaurant-card__title" lang="en">
+                KFC
+              </h3>
+
+              <div class="restaurant-card__box">
+                <span class="restaurant-card__time">
+                  06:00 - 23:30
+                </span>
+
+                <a class="primary-btn primary-btn--icon" href="http://localhost:3000/#">
+                  <span class="sr-only">
+                    Перейти на страницу ресторана
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li class="swiper-slide" role="group" aria-label="6 / 6" data-swiper-slide-index="5" style="width: 692px;">
+          <article class="restaurant-card">
+            <img class="restaurant-card__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/06.webp" alt="Стар Бургерс" width="370" height="300" loading="lazy">
+
+            <div class="restaurant-card__bottom">
+              <h3 class="restaurant-card__title" lang="en">
+                Star Burgers
+              </h3>
+
+              <div class="restaurant-card__box">
+                <span class="restaurant-card__time">
+                  09:00 - 21:00
+                </span>
+
+                <a class="primary-btn primary-btn--icon" href="http://localhost:3000/#">
+                  <span class="sr-only">
+                    Перейти на страницу ресторана
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+      <div class="pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="pagination__bullet pagination__bullet--active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+  </div>
+</section>
+
+    <section class="reviews section">
+  <div class="container">
+    <h2 class="title">
+      Отзывы клиентов
+    </h2>
+
+    <div class="reviews-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+
+      <ul class="swiper-wrapper" id="swiper-wrapper-5dab0a1ecae9579a" aria-live="polite">
+
+        <li class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4" data-swiper-slide-index="0" style="width: 742px;">
+          <figure class="review">
+            <img class="review__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01(2).webp" alt="Дарья, ценитель вкусной еды" width="300" height="300" loading="lazy">
+            <div class="review__box">
+              <blockquote class="review__text">
+                <p>
+                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                  приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
+                  доставку - однозначно рекомендую!
+                </p>
+              </blockquote>
+              <figcaption class="review__user-info">
+                <cite class="review__username">
+                  Дарья
+                </cite>
+                Ценитель вкусной еды
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+
+        <li class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 4" data-swiper-slide-index="1" style="width: 742px;">
+          <figure class="review">
+            <img class="review__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01(2).webp" alt="Дарья, ценитель вкусной еды" width="300" height="300" loading="lazy">
+            <div class="review__box">
+              <blockquote class="review__text">
+                <p>
+                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                  приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
+                  доставку - однозначно рекомендую!
+                </p>
+              </blockquote>
+              <figcaption class="review__user-info">
+                <cite class="review__username">
+                  Дарья
+                </cite>
+                Ценитель вкусной еды
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+
+        <li class="swiper-slide" role="group" aria-label="3 / 4" data-swiper-slide-index="2" style="width: 742px;">
+          <figure class="review">
+            <img class="review__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01(2).webp" alt="Дарья, ценитель вкусной еды" width="300" height="300" loading="lazy">
+            <div class="review__box">
+              <blockquote class="review__text">
+                <p>
+                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                  приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
+                  доставку - однозначно рекомендую!
+                </p>
+              </blockquote>
+              <figcaption class="review__user-info">
+                <cite class="review__username">
+                  Дарья
+                </cite>
+                Ценитель вкусной еды
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+
+        <li class="swiper-slide" role="group" aria-label="4 / 4" data-swiper-slide-index="3" style="width: 742px;">
+          <figure class="review">
+            <img class="review__img" src="./Сервис доставки еды Симпл Фуд _ Главная_files/01(2).webp" alt="Дарья, ценитель вкусной еды" width="300" height="300" loading="lazy">
+            <div class="review__box">
+              <blockquote class="review__text">
+                <p>
+                  SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                  приложение. Их доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на
+                  доставку - однозначно рекомендую!
+                </p>
+              </blockquote>
+              <figcaption class="review__user-info">
+                <cite class="review__username">
+                  Дарья
+                </cite>
+                Ценитель вкусной еды
+              </figcaption>
+            </div>
+          </figure>
+        </li>
+
+      </ul>
+
+      <div class="swiper-controls">
+        <button class="swiper-button-prev" type="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-5dab0a1ecae9579a">
+          <span class="sr-only">
+            Посмотреть предидущий отзыв
+          </span>
+        </button>
+
+        <div class="pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="pagination__bullet pagination__bullet--active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="pagination__bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+
+        <button class="swiper-button-next" type="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-5dab0a1ecae9579a">
+          <span class="sr-only">
+            Посмотреть следующий отзыв
+          </span>
+        </button>
+      </div>
+
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+  </div>
+</section>
+
+    <section class="app section">
+  <div class="container" style="background-image: url(&#39;./images/mobile-app/mobile-app.webp&#39;);">
+    <div class="app__box">
+      <h2 class="title">
+        Скачайте мобильное приложение
+      </h2>
+
+      <div class="app__text">
+        <p>
+          Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном
+          месте.
+        </p>
+      </div>
+
+      <ul class="app__list">
+        <li>
+          <a class="app__link app__link--appstore" href="http://localhost:3000/#" target="_blank">
+            <span class="sr-only">
+              Скачать приложение в Эп Стор
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="app__link app__link--googleplay" href="http://localhost:3000/#" target="_blank">
+            <span class="sr-only">
+              Скачать приложение в Гугл Плей
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+
+    <div class="subscribe-email">
+      <a class="logo" href="http://localhost:3000/#">
+        <img src="./Сервис доставки еды Симпл Фуд _ Главная_files/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
+      </a>
+
+      <form class="subscribe-email__form" action="http://localhost:3000/#">
+        <label class="subscribe-email__label">
+          <span class="sr-only">
+            Введите ваш email для подписки
+          </span>
+          <input class="subscribe-email__input" placeholder="Ваш email" type="email" name="usermail" required="">
+        </label>
+        <button class="subscribe-email__btn" type="submit">
+          Подписаться
+        </button>
+      </form>
+    </div>
+
+    <ul class="footer__list">
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Как это работает
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          О нас
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Скачать приложение
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Продукты
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Новости
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Блог
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Блюда
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Партнеры
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Что нового?
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Меню
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          ЧаВо
+        </a>
+      </li>
+      <li>
+        <a class="link" href="http://localhost:3000/#">
+          Карта сайта
+        </a>
+      </li>
+    </ul>
+
+    <address class="contacts ">
+  <ul class="contacts__list">
+    <li class="contacts__item">
+      <p class="contacts__location">
+        ул. Т.Г.Шевченко, 1
+      </p>
+    </li>
+
+    <li class="contacts__item">
+      <a class="contacts__link contacts__link--tel" href="tel:+380501112233">
+        380501112233
+      </a>
+    </li>
+
+    <li class="contacts__item">
+      <a class="contacts__link contacts__link--email" href="mailto:support@sfood.com">
+        support@sfood.com
+      </a>
+    </li>
+  </ul>
+
+  <ul class="social">
+    <li>
+      <a class="social__link social__link--facebook" href="http://localhost:3000/#" target="_blank">
+        <span class="sr-only">
+          Фейсбук
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="social__link social__link--twitter" href="http://localhost:3000/#" target="_blank">
+        <span class="sr-only">
+          Твиттер
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a class="social__link social__link--instagram" href="http://localhost:3000/#" target="_blank">
+        <span class="sr-only">
+          Инстаграм
+        </span>
+      </a>
+    </li>
+  </ul>
+</address>
+
+  </div>
+
+  <div class="footer__copy">
+    <span>
+      © 2022 Simple Food
+    </span>
+  </div>
+
+</footer>
+
+<script src="./Сервис доставки еды Симпл Фуд _ Главная_files/main.min.js.Без названия"></script>
+
+
+</body></html>

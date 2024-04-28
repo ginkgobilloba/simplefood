@@ -2,5 +2,19 @@
   margin-bottom: 45px;
   font-size: 36px;
   font-weight: 500;
+  text-wrap: balance;
   color: $auxillary;
+
+  @media (max-width: $lg) {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $lg) and (orientation: landscape) {
+    font-size: 24px;
+  }
 }

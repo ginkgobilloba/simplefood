@@ -16,6 +16,8 @@
   }
 
   &--header {
+    margin-right: 20px;
+
     @media (max-width: $md) {
       max-width: 115px;
     }

@@ -11,7 +11,7 @@ const gulpConcat = require("gulp-concat");
 const gulpUglify = require("gulp-uglify");
 
 const imagemin = require("gulp-imagemin");
-const gulpSvgstore = require("gulp-svgstore");
+const gulpSvgSprite = require("gulp-svg-sprite");
 
 const browserSync = require("browser-sync").create();
 
@@ -85,8 +85,16 @@ function images() {
 
 function svgSprite() {
   return src("./app/images/icons/**/*.svg")
-    .pipe(gulpSvgstore())
-    .pipe(dest("./app/images"));
+    .pipe(
+      gulpSvgSprite({
+        mode: {
+          stack: {
+            sprite: "../sprite.svg"
+          }
+        }
+      })
+    )
+    .pipe(dest("app/images"));
 }
 
 function fonts() {

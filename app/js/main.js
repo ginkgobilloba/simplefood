@@ -50,13 +50,15 @@ const mixer = mixitup(".popular__list", {
   }
 });
 
-// Swiper
+// Rewiews slider
 
-const swiper = new Swiper(".reviews-swiper", {
+const swiperReviews = new Swiper(".reviews-swiper", {
   loop: true,
 
   pagination: {
-    el: ".swiper-pagination",
+    el: ".pagination",
+    bulletClass: "pagination__bullet",
+    bulletActiveClass: "pagination__bullet--active",
     clickable: true
   },
 
@@ -65,3 +67,37 @@ const swiper = new Swiper(".reviews-swiper", {
     prevEl: ".swiper-button-prev"
   }
 });
+
+// Restaurants slider
+let swiperRestaurants;
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  swiperRestaurantsInit();
+}
+
+window.addEventListener("resize", function () {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    if (
+      swiperRestaurants === undefined ||
+      swiperRestaurants.destroyed === true
+    ) {
+      swiperRestaurantsInit();
+    }
+  } else {
+    if (swiperRestaurants !== undefined) {
+      swiperRestaurants.destroy(true, true);
+    }
+  }
+});
+
+function swiperRestaurantsInit() {
+  swiperRestaurants = new Swiper(".restaurants-swiper", {
+    loop: true,
+    pagination: {
+      el: ".pagination",
+      bulletClass: "pagination__bullet",
+      bulletActiveClass: "pagination__bullet--active",
+      clickable: true
+    }
+  });
+}

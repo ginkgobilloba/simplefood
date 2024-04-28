@@ -1,13 +1,25 @@
 .app {
+
   .container {
-    display: flex;
-    align-items: center;
+    background-size: contain;
+    background-position: 100% 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+
+    @media (max-width: $lg) {
+      background-image: unset !important;
+    }
   }
 
   &__box {
     max-width: 540px;
     width: 100%;
-    margin-right: 60px;
+  }
+
+  .title {
+    @media (max-width: $lg) {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -17,15 +29,20 @@
       line-height: 1.5;
 
       &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
+    }
+
+    @media (max-width: $lg) {
+      margin-bottom: 15px;
     }
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    column-gap: 30px;
+    gap: 10px 30px;
   }
 
   &__link {
@@ -59,10 +76,5 @@
       border-radius: 5px;
       background-image: url("../images/mobile-app/googleplay.svg");
     }
-  }
-
-  &__img {
-    aspect-ratio: 570 / 380;
-    object-fit: cover;
   }
 }

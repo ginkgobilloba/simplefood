@@ -51,16 +51,11 @@
   }
 
   &.fixed {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 15px 0;
 
     &::before {
       background-color: rgba($secondary-800, 0.7);
       backdrop-filter: blur(10px);
-    }
-
-    @media (max-width: $lg) {
-      padding: 15px 0;
     }
 
     @media (max-width: $md) {
