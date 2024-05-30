@@ -1,0 +1,66 @@
+// MAX-WIDTH and ORIENTATION
+@mixin wmax($width, $orientation: null) {
+  @if $orientation =="l" {
+    @media (max-width: #{$width}px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $orientation =="p" {
+    @media (max-width: #{$width}px) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (max-width: #{$width}px) {
+      @content;
+    }
+  }
+
+}
+
+// MIN-WIDTH and ORIENTATION
+@mixin wmin($width, $orientation: null) {
+  @if $orientation =="l" {
+    @media (min-width: #{$width}px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $orientation =="p" {
+    @media (min-width: #{$width}px) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: #{$width}px) {
+      @content;
+    }
+  }
+
+}
+
+// MAX-HEIGHT
+@mixin hmax($height) {
+  @media (max-height: #{$height}px) {
+    @content;
+  }
+}
+
+// MIN-HEIGHT
+@mixin hmin($height) {
+  @media (min-height: #{$height}px) {
+    @content;
+  }
+}
+
+// HOVER and POINTER
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
