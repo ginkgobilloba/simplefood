@@ -10,18 +10,17 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
 
-    @media (max-width: $lg) {
+    @include wmax($lg) {
       margin-right: 0;
       margin-bottom: 30px;
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       width: 100px;
       margin-bottom: 20px;
     }
 
-
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       width: 100px;
       margin-bottom: 20px;
     }
@@ -71,15 +70,15 @@
       }
     }
 
-    @media (max-width: $lg) {
+    @include wmax($lg) {
       margin-bottom: 20px;
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       font-size: 14px;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       font-size: 14px;
     }
   }
@@ -95,18 +94,18 @@
     font-weight: 500;
     color: $accent-900;
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       margin-bottom: 10px;
       font-size: 16px;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       margin-bottom: 10px;
       font-size: 16px;
     }
   }
 
-  @media (max-width: $lg) {
+  @include wmax($lg) {
     flex-direction: column;
   }
 }

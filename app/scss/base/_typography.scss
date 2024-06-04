@@ -5,16 +5,16 @@
   text-wrap: balance;
   color: $auxillary;
 
-  @media (max-width: $lg) {
+  @include wmax($lg) {
     margin-bottom: 30px;
     font-size: 30px;
   }
 
-  @media (max-width: $sm) {
+  @include wmax($sm) {
     font-size: 24px;
   }
 
-  @media (max-width: $lg) and (orientation: landscape) {
+  @include wmax($lg, l) {
     font-size: 24px;
   }
 }

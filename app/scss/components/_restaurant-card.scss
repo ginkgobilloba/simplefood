@@ -9,9 +9,9 @@
   box-shadow: 0 3px 3px rgba($black, 0.1);
   outline: 2px solid transparent;
   text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 
-  &:hover {
+  @include hover {
     transform: translateY(7px);
     box-shadow: 0 3px 15px rgba($accent-900, 0.5);
   }
@@ -32,6 +32,13 @@
     flex-grow: 1;
     margin-bottom: 20px;
     font-size: 24px;
+    transition: color 0.3s;
+
+    &--discount {
+      flex-grow: 0;
+      padding: 15px 20px;
+      margin-bottom: 0;
+    }
   }
 
   &__box {
@@ -59,5 +66,9 @@
       mask-repeat: no-repeat;
       background-color: currentColor;
     }
+  }
+
+  &--discount {
+    justify-content: space-between;
   }
 }

@@ -1,0 +1,35 @@
+.discounts {
+
+  .title {
+    margin-bottom: 60px;
+
+    @include wmax($xl) {
+      margin-bottom: 45px;
+    }
+
+    @include wmax($lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+
+    &:focus {
+      .restaurant-card__title {
+        color: $accent-900;
+      }
+    }
+
+    &:active {
+      .restaurant-card {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  @include wmax($xl) {
+    text-align: center;
+  }
+}

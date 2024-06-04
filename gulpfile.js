@@ -67,6 +67,8 @@ function styles() {
 
 function scripts() {
   return src([
+    "./node_modules/jquery/dist/jquery.js",
+    "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/mixitup/dist/mixitup.js",
     "./node_modules/swiper/swiper-bundle.js",
     "./app/js/main.js"
@@ -112,17 +114,6 @@ function watching() {
   watch("./app/fonts/**/*", fonts).on("add", browserSync.reload);
 }
 
-// TASKS FOR BUILD
-
-// function serverDocs() {
-//   browserSync.init({
-//     server: {
-//       baseDir: "./docs"
-//     },
-//     notify: false
-//   });
-// }
-
 function cleanDocs() {
   return del("./docs");
 }
@@ -145,7 +136,13 @@ function stylesDocs() {
 }
 
 function scriptsDocs() {
-  return src(["./node_modules/mixitup/dist/mixitup.js", "./app/js/main.js"])
+  return src([
+    "./node_modules/jquery/dist/jquery.js",
+    "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+    "./node_modules/mixitup/dist/mixitup.js",
+    "./node_modules/swiper/swiper-bundle.js",
+    "./app/js/main.js"
+  ])
     .pipe(gulpPlumber(gulpPlumberConfig))
     .pipe(gulpConcat("main.min.js"))
     .pipe(gulpUglify())

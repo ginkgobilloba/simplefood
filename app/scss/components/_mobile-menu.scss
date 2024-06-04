@@ -1,10 +1,10 @@
 .mobile-menu {
   display: none;
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 300px;
   height: 100%;
   overflow: auto;
   background-color: $white;
@@ -27,7 +27,11 @@
     }
   }
 
-  @media (max-width: $md) {
+  @include wmax($md) {
     display: block;
+  }
+
+  &.active {
+    transform: translateX(0);
   }
 }

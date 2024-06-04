@@ -1,12 +1,33 @@
 .app {
 
   .container {
+    position: relative;
+    z-index: 1;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
     background-size: contain;
     background-position: 100% 50%;
     background-origin: content-box;
     background-repeat: no-repeat;
 
-    @media (max-width: $lg) {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include wmax($xl) {
+        background-color: rgba($secondary-700, 0.85);
+      }
+    }
+
+    @include wmax($lg) {
+      min-height: auto;
+      justify-content: center;
       background-image: unset !important;
     }
   }
@@ -17,7 +38,7 @@
   }
 
   .title {
-    @media (max-width: $lg) {
+    @include wmax($lg) {
       margin-bottom: 15px;
     }
   }
@@ -33,7 +54,7 @@
       }
     }
 
-    @media (max-width: $lg) {
+    @include wmax($lg) {
       margin-bottom: 15px;
     }
   }
@@ -57,7 +78,7 @@
       box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
     }
 
-    &:hover {
+    @include hover {
       transform: translateY(3px);
     }
 

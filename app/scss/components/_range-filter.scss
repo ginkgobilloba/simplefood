@@ -1,0 +1,55 @@
+.range-filter {
+
+  &__controls {
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    &::before,
+    &::after {
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      color: $secondary-900;
+    }
+
+    &::after {
+      content: "₴";
+    }
+
+    &--from {
+      &::before {
+        content: "от";
+      }
+    }
+
+    &--to {
+      &::before {
+        content: "до";
+      }
+    }
+  }
+
+  &__input {
+    width: 72px;
+    padding: 12px 0;
+    border: 1px solid $secondary-800;
+    border-radius: 3px;
+    background-color: $accent-600;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $accent-900;
+    }
+  }
+}

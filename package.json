@@ -26,6 +26,8 @@
     "sass": "^1.72.0"
   },
   "dependencies": {
+    "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.7.1",
     "mixitup": "^3.3.1",
     "swiper": "^11.1.1"
   }

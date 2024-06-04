@@ -38,15 +38,25 @@
     align-items: center;
   }
 
-  @media (max-width: $lg) {
+  .burger {
+    @include wmax($md) {
+      display: flex;
+    }
+  }
+
+  @include wmax($lg) {
     padding: 35px 0;
   }
 
-  @media (max-width: $md) {
+  @include wmax($md) {
     padding: 24px 0;
   }
 
-  @media (max-width: $lg) and (orientation: landscape) {
+  @include wmax($sm) {
+    padding: 14px 0;
+  }
+
+  @include wmax($lg, l) {
     padding: 7px 0;
   }
 
@@ -58,24 +68,19 @@
       backdrop-filter: blur(10px);
     }
 
-    @media (max-width: $md) {
+    @include wmax($md) {
       padding: 7px 0;
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       padding: 7px 0;
     }
   }
 
   &.mobile {
-
     &::after {
       visibility: visible;
       opacity: 1;
-    }
-
-    .mobile-menu {
-      transform: translate(0);
     }
   }
 }

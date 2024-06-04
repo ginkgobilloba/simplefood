@@ -1,0 +1,50 @@
+.adaptive-slider {
+
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include wmax($xl) {
+      grid-template-columns: repeat(2, minmax(auto, 370px));
+      justify-content: center;
+    }
+
+    @include wmax($md) {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: stretch;
+      gap: 0;
+    }
+  }
+
+  .swiper-slide {
+    @include wmax($md) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .pagination {
+    display: none;
+
+    @include wmax($md) {
+      display: flex;
+    }
+  }
+
+  @include wmax($md) {
+    overflow: hidden;
+  }
+
+  &--discounts {
+    .swiper-wrapper {
+      margin-bottom: 45px;
+
+
+      @media (orientation: landscape) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

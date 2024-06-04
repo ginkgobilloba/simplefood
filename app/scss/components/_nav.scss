@@ -11,7 +11,8 @@
       gap: 20px 0;
     }
 
-    @media (max-width: $lg) {
+
+    @include wmax($lg) {
       column-gap: 30px;
     }
   }
@@ -27,11 +28,11 @@
       letter-spacing: normal;
     }
 
-    @media (max-width: $lg) {
+    @include wmax($lg) {
       margin-right: 40px;
     }
 
-    @media (max-width: $md) {
+    @include wmax($md) {
       display: none;
     }
   }

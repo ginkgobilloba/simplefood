@@ -6,13 +6,13 @@
     <nav class="nav nav--desktop">
       <ul class="nav__list">
         <li>
-          <a href="#" class="link @@if (currentPage === 'home') {current}">
+          <a href="index.html" class="link @@if (currentPage === 'home') {current}">
             Главная
           </a>
         </li>
 
         <li>
-          <a href="#" class="link @@if (currentPage === 'products') {current}">
+          <a href="catalog.html" class="link @@if (currentPage === 'catalog') {current}">
             Блюда
           </a>
         </li>
@@ -51,7 +51,7 @@
 
   </div>
 
-  <div class="mobile-menu">
+  <div class="mobile-menu" id="mobileMenu">
 
     <div class="mobile-menu__box">
       @@include("../components/_logo.html", {modifier: ""})
@@ -67,12 +67,12 @@
       <nav class="nav nav--mobile">
         <ul class="nav__list nav__list--mobile">
           <li>
-            <a href="#" class="link @@if (currentPage === 'home') {current}">
+            <a href="index.html" class="link @@if (currentPage === 'home') {current}">
               Главная
             </a>
           </li>
           <li>
-            <a href="#" class="link @@if (currentPage === 'products') {current}">
+            <a href="catalog.html" class="link @@if (currentPage === 'catalog') {current}">
               Блюда
             </a>
           </li>

@@ -1,0 +1,119 @@
+.dropdown {
+  position: relative;
+  z-index: 1;
+
+  &__current,
+  &__value {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+
+  &__current {
+    min-width: 150px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+    background-color: $white;
+    border-radius: 3px;
+    outline: 1px solid $secondary-900;
+    outline-offset: -1px;
+    transition: color 0.3s, outline-color 0.3s;
+
+    &::after {
+      content: "";
+      width: 11px;
+      height: 11px;
+      mask-image: url("../images/sprite.svg#arrow-dropdown");
+      mask-size: contain;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: $secondary-900;
+      transition: background-color 0.3s;
+    }
+
+    &:focus {
+      outline-color: $accent-900;
+    }
+
+    @include hover {
+      color: $accent-900;
+      outline-color: $accent-900;
+
+      &::after {
+        background-color: $accent-900;
+      }
+    }
+
+    &.active {
+      color: $main;
+      outline-color: $secondary-900;
+
+      &::after {
+        background-color: $secondary-900;
+      }
+    }
+
+    &--quantity {
+      min-width: 94px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    z-index: -1;
+    top: calc(100% + 3px);
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $white;
+    box-shadow: 0 0 5px rgba($black, 0.15);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+  }
+
+  &__option {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__value {
+    display: block;
+    width: 100%;
+    padding: 14px 15px;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:has(+ input:focus) {
+      color: $accent-900;
+    }
+
+    &:focus {
+      color: $accent-900;
+    }
+
+    @include hover {
+      background-color: rgba($secondary-800, 0.6);
+      color: $accent-900;
+    }
+  }
+
+  &.open {
+
+    .dropdown__current {
+      color: $main;
+      outline-color: $secondary-900;
+
+      &::after {
+        background-color: $secondary-900;
+      }
+    }
+
+    .dropdown__list {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

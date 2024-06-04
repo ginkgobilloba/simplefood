@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./blocks/_head.html", {pageTitle: "Блюда"})
+
+<body>
+
+  @@include("./blocks/_header.html", {currentPage: "catalog"})
+
+  <main class="main">
+
+    <h1 class="sr-only">
+      Каталог товаров Симпл Фуд
+    </h1>
+
+    @@include("./catalog/_breadcrumbs.html")
+
+    @@include("./catalog/_catalog.html")
+
+    @@include("./blocks/_app.html")
+
+    @@include("./catalog/_discounts.html")
+
+  </main>
+
+  @@include("./blocks/_footer.html")
+
+</body>
+</html>

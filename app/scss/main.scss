@@ -4,6 +4,7 @@
 @import './base/fonts';
 @import './base/reset';
 @import './node_modules/swiper/swiper';
+@import './node_modules/ion-rangeslider/css/ion.rangeSlider';
 @import './base/global';
 @import './base/typography';
 
@@ -15,12 +16,18 @@
 @import './components/subscribe';
 @import './components/contacts';
 @import './components/restaurant-card';
+@import './components/adaptive-slider';
 @import './components/review';
 @import './components/nav';
 @import './components/mobile-menu';
 @import './components/burger';
 @import './components/filter';
 @import './components/pagination';
+@import './components/breadcrumbs';
+@import './components/dropdown';
+@import './components/sidebar';
+@import './components/range-filter';
+@import './components/products-pagination';
 
 // BLOCKS
 @import './blocks/header';
@@ -33,3 +40,7 @@
 @import './home/features';
 @import './home/restaurants';
 @import './home/reviews';
+
+// CATALOG PAGE
+@import './catalog/catalog';
+@import './catalog/discounts';

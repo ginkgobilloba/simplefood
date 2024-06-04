@@ -27,7 +27,7 @@
       box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
     }
 
-    &:hover {
+    @include hover {
       background-color: $accent-800;
       color: $white;
     }
@@ -54,7 +54,7 @@
         mask-image: url("../images/sprite.svg#cart");
       }
 
-      &:hover {
+      @include hover {
         .user-nav__btn-counter {
           background-color: $white;
           color: $accent-800;
@@ -86,7 +86,7 @@
     transition: background-color 0.3s, color 0.3s;
   }
 
-  @media (max-width: $md) {
+  @include wmax($md) {
     flex-grow: 1;
     margin-right: 10px;
     justify-content: flex-end;

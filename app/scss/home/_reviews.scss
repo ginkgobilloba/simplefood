@@ -8,12 +8,12 @@
   .reviews-swiper {
     overflow: hidden;
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       position: relative;
       z-index: 1;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       position: relative;
       z-index: 1;
     }
@@ -22,15 +22,15 @@
   .swiper-wrapper {
     margin-bottom: 43px;
 
-    @media (max-width: $lg) {
+    @include wmax($lg) {
       margin-bottom: 30px;
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       margin-bottom: 0;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       margin-bottom: 0;
     }
   }
@@ -42,22 +42,22 @@
     align-items: center;
     column-gap: 21px;
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       padding: 0;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       padding: 0;
     }
   }
 
   .pagination {
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       display: none;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       display: none;
     }
   }
@@ -91,7 +91,7 @@
       outline-color: rgba($accent-900, 0.7);
     }
 
-    &:hover {
+    @include hover {
       background-color: $accent-700;
       color: $accent-750;
     }
@@ -102,13 +102,13 @@
       color: $accent-800;
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       position: absolute;
       z-index: 3;
       top: 33px;
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       position: absolute;
       z-index: 3;
       top: 33px;
@@ -121,11 +121,11 @@
       mask-image: url("../images/sprite.svg#left");
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       right: calc(50% + 100px);
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       right: calc(50% + 100px);
     }
   }
@@ -136,11 +136,11 @@
       mask-image: url("../images/sprite.svg#right");
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       left: calc(50% + 100px);
     }
 
-    @media (max-width: $sm) {
+    @include wmax($sm) {
       left: calc(50% + 100px);
     }
   }

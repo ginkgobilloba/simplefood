@@ -62,8 +62,4 @@
       transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
-
-  @media (max-width: $md) {
-    display: flex;
-  }
 }

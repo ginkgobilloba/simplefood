@@ -2,11 +2,10 @@
   <div class="container">
 
     <div class="subscribe-email">
-      <a class="logo" href="#">
-        <img src="./images/logo.svg" width="200" height="39" alt="Логотип сервиса доставки еды Симпл Фуд">
-      </a>
+      @@include("../components/_logo.html", {
+      modifier: ""})
 
-      <form class="subscribe-email__form" action="#">
+      <form class="subscribe-email__form" action="#" name="subscribe-email">
         <label class="subscribe-email__label">
           <span class="sr-only">
             Введите ваш email для подписки

@@ -7,7 +7,7 @@
     box-shadow: 0 0 0 2px rgba($accent-900, 0.7);
   }
 
-  &:hover {
+  @include hover {
     opacity: 0.8;
   }
 
@@ -18,11 +18,11 @@
   &--header {
     margin-right: 20px;
 
-    @media (max-width: $md) {
+    @include wmax($sm) {
       max-width: 115px;
     }
 
-    @media (max-width: $lg) and (orientation: landscape) {
+    @include wmax($lg, l) {
       max-width: 115px;
     }
   }
