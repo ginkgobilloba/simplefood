@@ -58,26 +58,26 @@ if (sidebarOpen && sidebarClose) {
   sidebarOpen.addEventListener("click", function () {
     sidebar.classList.add("open");
     body.classList.add("fixed");
-    body.classList.add("overlay");
+    body.classList.add("bg-overlay");
   });
 
   sidebarClose.addEventListener("click", function () {
     sidebar.classList.remove("open");
     body.classList.remove("fixed");
-    body.classList.remove("overlay");
+    body.classList.remove("bg-overlay");
   });
 
   window.addEventListener("resize", function () {
     if (!window.matchMedia("(max-width: 992px)").matches) {
       sidebar.classList.remove("open");
       body.classList.remove("fixed");
-      body.classList.remove("overlay");
+      body.classList.remove("bg-overlay");
     }
   });
 }
 
 // Mixitup
-const popularContainer = document.querySelector(".popular__list");
+const popularContainer = document.querySelector("#popularContainer");
 
 if (popularContainer) {
   const mixer = mixitup(popularContainer, {
@@ -93,7 +93,7 @@ if (popularContainer) {
 
 // Rewiews slider
 
-const swiperReviews = new Swiper(".reviews-swiper", {
+const swiperReviews = new Swiper("#reviewsSlider", {
   loop: true,
 
   pagination: {
@@ -112,7 +112,7 @@ const swiperReviews = new Swiper(".reviews-swiper", {
 // Restaurants slider
 let swiperRestaurants;
 
-if (document.querySelector(".restaurants .adaptive-slider")) {
+if (document.querySelector("#restaurantsSlider")) {
   if (window.matchMedia("(max-width: 768px)").matches) {
     swiperRestaurantsInit();
   }
@@ -133,7 +133,7 @@ if (document.querySelector(".restaurants .adaptive-slider")) {
   });
 
   function swiperRestaurantsInit() {
-    swiperRestaurants = new Swiper(".restaurants .adaptive-slider", {
+    swiperRestaurants = new Swiper("#restaurantsSlider", {
       loop: true,
       pagination: {
         el: ".pagination",
@@ -149,7 +149,7 @@ if (document.querySelector(".restaurants .adaptive-slider")) {
 
 let swiperDiscounts;
 
-if (document.querySelector(".discounts .adaptive-slider")) {
+if (document.querySelector("#discountsSlider")) {
   if (window.matchMedia("(max-width: 768px)").matches) {
     swiperDiscountsInit();
   }
@@ -167,7 +167,7 @@ if (document.querySelector(".discounts .adaptive-slider")) {
   });
 
   function swiperDiscountsInit() {
-    swiperDiscounts = new Swiper(".discounts .adaptive-slider", {
+    swiperDiscounts = new Swiper("#discountsSlider", {
       loop: true,
       pagination: {
         el: ".pagination",

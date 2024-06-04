@@ -21,12 +21,8 @@
     }
   }
 
-  &__list {
+  .grid-products {
     margin-bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 212px);
-    gap: 27px;
-    justify-content: center;
 
     @include wmax($xl) {
       margin-bottom: 40px;
@@ -34,15 +30,6 @@
 
     @include wmax($lg) {
       margin-bottom: 30px;
-    }
-
-    @include wmax($lg, l) {
-      gap: 3px;
-    }
-
-    @include wmax($sm) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3px;
     }
   }
 }

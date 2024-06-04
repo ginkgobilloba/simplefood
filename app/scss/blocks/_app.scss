@@ -1,40 +1,25 @@
 .app {
 
   .container {
-    position: relative;
-    z-index: 1;
-    min-height: 380px;
-    display: flex;
-    align-items: center;
     background-size: contain;
     background-position: 100% 50%;
     background-origin: content-box;
     background-repeat: no-repeat;
 
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      @include wmax($xl) {
-        background-color: rgba($secondary-700, 0.85);
-      }
-    }
-
     @include wmax($lg) {
-      min-height: auto;
-      justify-content: center;
       background-image: unset !important;
     }
   }
 
-  &__box {
+  &__content {
     max-width: 540px;
     width: 100%;
+    padding: 40px 0;
+
+    @include wmax($lg) {
+      padding: 0;
+      margin: 0 auto;
+    }
   }
 
   .title {

@@ -1,4 +1,4 @@
-.adaptive-slider {
+.slider-responsive {
 
   .swiper-wrapper {
     display: grid;
@@ -39,10 +39,11 @@
 
   &--discounts {
     .swiper-wrapper {
-      margin-bottom: 45px;
+      @include wmax($md) {
+        margin-bottom: 45px;
+      }
 
-
-      @media (orientation: landscape) {
+      @include wmax($md, l) {
         margin-bottom: 30px;
       }
     }
