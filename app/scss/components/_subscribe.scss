@@ -59,9 +59,7 @@
       flex-shrink: 0;
       margin-right: 15px;
       mask-image: url("../images/sprite.svg#subscribe");
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
     }
 

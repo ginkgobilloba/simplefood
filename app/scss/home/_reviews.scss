@@ -37,7 +37,7 @@
     }
   }
 
-  .pagination {
+  .pagination-slider {
 
     @include wmax($lg, l) {
       display: none;
@@ -67,9 +67,7 @@
       content: "";
       width: 19px;
       height: 19px;
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
     }
 

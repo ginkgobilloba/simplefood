@@ -1,10 +1,8 @@
 .app {
 
   .container {
-    background-size: contain;
-    background-position: 100% 50%;
+    @include background-image(contain, 100% 50%);
     background-origin: content-box;
-    background-repeat: no-repeat;
 
     @include wmax($lg) {
       background-image: unset !important;
@@ -54,9 +52,7 @@
   &__link {
     display: block;
     height: 40px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include background-image(contain);
     transition: box-shadow 0.3s, transform 0.3s, opacity 0.3s;
 
     &:focus {

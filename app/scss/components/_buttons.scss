@@ -118,9 +118,7 @@
       width: 14px;
       height: 12px;
       mask-image: url("../images/sprite.svg#arrow-right");
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
       transition: transform 0.3s ease-in-out;
     }

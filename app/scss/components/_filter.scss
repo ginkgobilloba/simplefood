@@ -26,9 +26,7 @@
       content: "";
       width: 44px;
       height: 44px;
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
 
       @include wmax($lg, l) {

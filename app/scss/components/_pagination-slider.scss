@@ -1,0 +1,34 @@
+.pagination-slider {
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+
+  &__bullet {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $secondary-900;
+    cursor: pointer;
+    outline: transparent;
+    transition: box-shadow 0.3s, background-color 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $accent-900;
+    }
+
+    @include hover {
+      background-color: $accent-700;
+      box-shadow: 0 0 0 2px rgba($accent-800, 0.7);
+    }
+
+    &:active {
+      background-color: $accent-750;
+      box-shadow: none;
+    }
+
+    &--active {
+      background-color: $accent-800;
+    }
+  }
+}

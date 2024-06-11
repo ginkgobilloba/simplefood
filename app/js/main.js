@@ -97,9 +97,9 @@ const swiperReviews = new Swiper("#reviewsSlider", {
   loop: true,
 
   pagination: {
-    el: ".pagination",
-    bulletClass: "pagination__bullet",
-    bulletActiveClass: "pagination__bullet--active",
+    el: ".pagination-slider",
+    bulletClass: "pagination-slider__bullet",
+    bulletActiveClass: "pagination-slider__bullet--active",
     clickable: true
   },
 
@@ -136,9 +136,9 @@ if (document.querySelector("#restaurantsSlider")) {
     swiperRestaurants = new Swiper("#restaurantsSlider", {
       loop: true,
       pagination: {
-        el: ".pagination",
-        bulletClass: "pagination__bullet",
-        bulletActiveClass: "pagination__bullet--active",
+        el: ".pagination-slider",
+        bulletClass: "pagination-slider__bullet",
+        bulletActiveClass: "pagination-slider__bullet--active",
         clickable: true
       }
     });
@@ -170,9 +170,9 @@ if (document.querySelector("#discountsSlider")) {
     swiperDiscounts = new Swiper("#discountsSlider", {
       loop: true,
       pagination: {
-        el: ".pagination",
-        bulletClass: "pagination__bullet",
-        bulletActiveClass: "pagination__bullet--active",
+        el: ".pagination-slider",
+        bulletClass: "pagination-slider__bullet",
+        bulletActiveClass: "pagination-slider__bullet--active",
         clickable: true
       }
     });
@@ -183,31 +183,13 @@ if (document.querySelector("#discountsSlider")) {
 
 const dropdowns = document.querySelectorAll(".dropdown");
 
-dropdowns.forEach(function (container) {
-  const mainBtn = container.querySelector(".dropdown__current");
-  const optionBox = container.querySelector(".dropdown__list");
-  const options = container.querySelectorAll(".dropdown__option");
-
-  mainBtn.addEventListener("click", function () {
-    container.classList.add("open");
-
-    options.forEach(function (option) {
-      option.addEventListener("click", function () {
-        const optionValue = option.querySelector(".dropdown__value").innerText;
-        mainBtn.innerText = optionValue;
-        container.classList.remove("open");
-      });
-    });
-
-    document.addEventListener("click", function (e) {
-      if (!optionBox.contains(e.target) && !container.contains(e.target)) {
-        container.classList.remove("open");
-      }
-    });
+dropdowns.forEach(function (item) {
+  const choices = new Choices(item, {
+    position: "bottom",
+    searchEnabled: false,
+    itemSelectText: ""
   });
 });
-
-// Price range slider
 
 let $range = $("#range-slider");
 let $inputFrom = $("#range-from");

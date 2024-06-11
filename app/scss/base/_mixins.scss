@@ -64,3 +64,17 @@
     }
   }
 }
+
+// BACKGROUND-IMAGE template
+@mixin background-image($size, $position: center) {
+  background-size: $size;
+  background-position: $position;
+  background-repeat: no-repeat;
+}
+
+// MASK-IMAGE template
+@mixin mask-image($size, $position: center) {
+  mask-size: $size;
+  mask-position: $position;
+  mask-repeat: no-repeat;
+}

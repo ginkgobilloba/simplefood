@@ -1,6 +1,7 @@
 .user-nav {
   display: flex;
   align-items: center;
+  column-gap: 10px;
 
   &__btn {
     width: 44px;
@@ -16,9 +17,7 @@
       content: "";
       width: 19px;
       height: 19px;
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
     }
 
@@ -35,10 +34,6 @@
     &:active {
       background-color: $accent-700;
       color: $auxillary;
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
     }
 
     &--search {

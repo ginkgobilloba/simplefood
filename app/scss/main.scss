@@ -5,6 +5,7 @@
 @import './base/reset';
 @import './node_modules/swiper/swiper';
 @import './node_modules/ion-rangeslider/css/ion.rangeSlider';
+@import './node_modules/choices.js/public/assets/styles/choices';
 @import './base/global';
 @import './base/typography';
 
@@ -23,12 +24,12 @@
 @import './components/mobile-menu';
 @import './components/burger';
 @import './components/filter';
-@import './components/pagination';
+@import './components/pagination-slider';
 @import './components/breadcrumbs';
 @import './components/dropdown';
 @import './components/sidebar';
 @import './components/range-filter';
-@import './components/products-pagination';
+@import './components/pagination';
 
 // BLOCKS
 @import './blocks/header';

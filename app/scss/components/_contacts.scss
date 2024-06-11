@@ -23,9 +23,7 @@
       height: 24px;
       margin-right: 7px;
       flex-shrink: 0;
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
     }
   }
@@ -84,9 +82,7 @@
       content: "";
       width: 21px;
       height: 21px;
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
     }
 

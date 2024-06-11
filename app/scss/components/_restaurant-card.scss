@@ -39,6 +39,10 @@
       padding: 15px 20px;
       margin-bottom: 0;
     }
+
+    &:has(~ .restaurant-card__link:focus) {
+      color: $accent-900;
+    }
   }
 
   &__box {
@@ -61,14 +65,27 @@
       height: 22px;
       flex-shrink: 0;
       mask-image: url("../images/sprite.svg#time");
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: currentColor;
     }
   }
 
+  &__link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:has(.restaurant-card__link:active) {
+    opacity: 0.7;
+  }
+
   &--discount {
+    position: relative;
+    z-index: 1;
     justify-content: space-between;
   }
 }

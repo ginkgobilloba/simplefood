@@ -2,13 +2,11 @@
   <div class="container">
 
     <div class="catalog__top">
-
       <h2 class="title">
         Каталог продуктов
       </h2>
 
       <div class="catalog__controls">
-
         <button class="catalog__btn-sidebar" type="button" id="sidebarOpen">
           <span class="sr-only">
             Показать сайдбар с фильтрами
@@ -16,104 +14,58 @@
         </button>
 
         <form class="catalog__form" action="#" name="sort">
+          <label class="catalog__label">
+            <span class="sr-only">
+              Выберите, как сортировать товары
+            </span>
+            <select class="dropdown" name="sort-1">
+              <option value="name" selected>
+                По названию
+              </option>
+              <option value="name">
+                По цене
+              </option>
+              <option value="name">
+                Популярное
+              </option>
+              <option value="name">
+                Акции
+              </option>
+              <option value="name">
+                Сеты
+              </option>
+            </select>
+          </label>
 
-          <div class="dropdown">
-            <button class="dropdown__current" type="button">
-              <span class="sr-only">
-                Текущая выбранная сортировка. Кнопка позволяет выбрать другую сортировку.
-              </span>
-              По названию
-            </button>
-            <ul class="dropdown__list">
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    По названию
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-1" value="name" checked>
-                </label>
-              </li>
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    По цене
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-1" value="price">
-                </label>
-              </li>
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    Популярное
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-1" value="popular">
-                </label>
-              </li>
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    Акции
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-1" value="popular">
-                </label>
-              </li>
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    Сеты
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-1" value="popular">
-                </label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="dropdown">
-            <button class="dropdown__current dropdown__current--quantity" type="button">
-              <span class="sr-only">
-                Текущая выбранная сортировка. Кнопка позволяет выбрать другую сортировку.
-              </span>
-              По 12
-            </button>
-            <ul class="dropdown__list">
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    По 12
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-2" value="12" checked>
-                </label>
-              </li>
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    По 8
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-2" value="8">
-                </label>
-              </li>
-              <li>
-                <label class="dropdown__option">
-                  <span class="dropdown__value">
-                    По 4
-                  </span>
-                  <input class="sr-only" type="radio" name="sort-2" value="4">
-                </label>
-              </li>
-            </ul>
-          </div>
-
+          <label class="catalog__label catalog__label--quantity">
+            <span class="sr-only">
+              Выберите, как сортировать товары
+            </span>
+            <select class="dropdown" name="sort-2">
+              <option value="name" selected>
+                По 12
+              </option>
+              <option value="name">
+                По 8
+              </option>
+              <option value="name">
+                По 4
+              </option>
+            </select>
+          </label>
         </form>
-
       </div>
     </div>
 
     <div class="catalog__body">
+      <section class="sidebar" id="sidebar">
+        <h2 class="sr-only">
+          Боковая панель, содержит фильтры для товаров
+        </h2>
 
-      <aside class="sidebar" id="sidebar">
         <button class="burger burger--close" type="button" id="sidebarClose">
           <span class="sr-only">
-            Скрыть сайдбар с фильтрами
+            Скрыть боковую панель с фильтрами
           </span>
         </button>
 
@@ -228,7 +180,7 @@
             <input id="range-slider" type="text" name="" value="" readonly></input>
           </form>
         </div>
-      </aside>
+      </section>
 
       <div class="catalog__products">
         <ul class="grid-products grid-products--catalog">
@@ -498,57 +450,58 @@
           </li>
         </ul>
 
-        <div class="products-pagination">
+        <div class="pagination">
           <span class="sr-only">
             Меню навигации по товарам. Цифра - обозначает номер группы товаров, на которую можно переключиться
           </span>
 
-          <button class="products-pagination__btn products-pagination__btn--prev disabled" type="button">
+          <button class="pagination__btn pagination__btn--prev disabled" type="button">
             <span class=sr-only>
               Переключиться на предыдущую группу товаров
             </span>
           </button>
 
-          <ul class="products-pagination__list">
+          <ul class="pagination__list">
             <li>
-              <button class="products-pagination__btn current" type="button">
+              <button class="pagination__btn current" type="button">
                 1
               </button>
             </li>
 
             <li>
-              <button class="products-pagination__btn products-pagination__btn--adaptive" type="button">
+              <button class="pagination__btn pagination__btn--adaptive" type="button">
                 2
               </button>
             </li>
 
             <li>
-              <button class="products-pagination__btn" type="button">
+              <button class="pagination__btn" type="button">
                 ...
               </button>
             </li>
 
             <li>
-              <button class="products-pagination__btn products-pagination__btn--adaptive" type="button">
+              <button class="pagination__btn pagination__btn--adaptive" type="button">
                 9
               </button>
             </li>
 
             <li>
-              <button class="products-pagination__btn" type="button">
+              <button class="pagination__btn" type="button">
                 10
               </button>
             </li>
           </ul>
 
-          <button class="products-pagination__btn products-pagination__btn--next" type="button">
+          <button class="pagination__btn pagination__btn--next" type="button">
             <span class=sr-only>
               Переключиться на следующую группу товаров
             </span>
           </button>
-
         </div>
       </div>
     </div>
+
+    <input class="super-input" type="number">
   </div>
 </section>

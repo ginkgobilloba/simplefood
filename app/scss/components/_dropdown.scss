@@ -1,119 +1,101 @@
-.dropdown {
-  position: relative;
+// CHOISES.JS customization
+
+.choices {
+  padding: 15px;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
+  border-radius: 3px;
+  background-color: $white ;
+  outline: 1px solid $secondary-900;
+  outline-offset: -1px;
 
-  &__current,
-  &__value {
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-  }
-
-  &__current {
-    min-width: 150px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 15px;
-    background-color: $white;
-    border-radius: 3px;
+  &:focus {
     outline: 1px solid $secondary-900;
-    outline-offset: -1px;
-    transition: color 0.3s, outline-color 0.3s;
-
-    &::after {
-      content: "";
-      width: 11px;
-      height: 11px;
-      mask-image: url("../images/sprite.svg#arrow-dropdown");
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
-      background-color: $secondary-900;
-      transition: background-color 0.3s;
-    }
-
-    &:focus {
-      outline-color: $accent-900;
-    }
-
-    @include hover {
-      color: $accent-900;
-      outline-color: $accent-900;
-
-      &::after {
-        background-color: $accent-900;
-      }
-    }
-
-    &.active {
-      color: $main;
-      outline-color: $secondary-900;
-
-      &::after {
-        background-color: $secondary-900;
-      }
-    }
-
-    &--quantity {
-      min-width: 94px;
-    }
   }
 
-  &__list {
-    position: absolute;
-    z-index: -1;
-    top: calc(100% + 3px);
-    left: 0;
-    width: 100%;
-    border-radius: 3px;
-    background-color: $white;
-    box-shadow: 0 0 5px rgba($black, 0.15);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s;
+  @include wmax($sm) {
+    padding: 15px 10px;
+    column-gap: 10px;
   }
+}
 
-  &__option {
-    display: block;
-    cursor: pointer;
+.choices[data-type*=select-one]::after {
+  border: none;
+  position: static;
+  margin: 0;
+  width: 11px;
+  height: 11px;
+  mask-image: url("../images/sprite.svg#arrow-dropdown");
+  @include mask-image(contain);
+  background-color: $secondary-900;
+}
+
+.choices[data-type*=select-one].is-open::after {
+  margin-top: 0;
+  border: none;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 0;
+}
+
+.choices__inner {
+  min-height: auto;
+  width: auto;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.choices__list--single {
+  display: block;
+  padding: 0;
+}
+
+.choices__list--single .choices__item {
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  top: calc(100% + 3px);
+  left: 0;
+  border: none;
+  opacity: 0;
+  border-radius: 3px;
+  word-break: normal;
+  box-shadow: 0 0 5px rgba($black, 0.15);
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.is-active.choices__list--dropdown,
+.is-active.choices__list[aria-expanded] {
+  opacity: 1;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 0;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  padding: 14px 15px;
+  transition: background-color 0.3s, color 0.3s;
+
+  @include wmax($sm) {
+    padding: 15px 10px;
   }
+}
 
-  &__value {
-    display: block;
-    width: 100%;
-    padding: 14px 15px;
-    transition: color 0.3s, background-color 0.3s;
-
-    &:has(+ input:focus) {
-      color: $accent-900;
-    }
-
-    &:focus {
-      color: $accent-900;
-    }
-
-    @include hover {
-      background-color: rgba($secondary-800, 0.6);
-      color: $accent-900;
-    }
-  }
-
-  &.open {
-
-    .dropdown__current {
-      color: $main;
-      outline-color: $secondary-900;
-
-      &::after {
-        background-color: $secondary-900;
-      }
-    }
-
-    .dropdown__list {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: rgba($secondary-800, 0.6);
+  color: $accent-900;
 }

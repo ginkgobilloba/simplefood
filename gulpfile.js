@@ -71,6 +71,7 @@ function scripts() {
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/mixitup/dist/mixitup.js",
     "./node_modules/swiper/swiper-bundle.js",
+    "./node_modules/choices.js/public/assets/scripts/choices.js",
     "./app/js/main.js"
   ])
     .pipe(gulpPlumber(gulpPlumberConfig))
@@ -141,6 +142,7 @@ function scriptsDocs() {
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/mixitup/dist/mixitup.js",
     "./node_modules/swiper/swiper-bundle.js",
+    "./node_modules/choices.js/public/assets/scripts/choices.js",
     "./app/js/main.js"
   ])
     .pipe(gulpPlumber(gulpPlumberConfig))

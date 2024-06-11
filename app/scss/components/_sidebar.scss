@@ -128,9 +128,7 @@
       width: 12px;
       height: 12px;
       mask-image: url("../images/sprite.svg#check");
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
     }
 
     @include hover {

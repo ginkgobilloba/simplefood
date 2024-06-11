@@ -43,9 +43,7 @@
       position: absolute;
       width: 24px;
       height: 20px;
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: $secondary-900;
     }
 

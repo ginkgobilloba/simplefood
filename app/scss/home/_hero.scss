@@ -4,10 +4,8 @@
     min-height: calc(100vh - 158px);
     display: flex;
     align-items: center;
-    background-size: contain;
+    @include background-image(contain, 100% 50%);
     background-origin: content-box;
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
 
     @include wmax($lg) {
       min-height: calc(100vh - 114px);

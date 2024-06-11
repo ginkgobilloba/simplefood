@@ -49,5 +49,19 @@
     "prefix": "hv",
     "body": ["@include hover {", "$0", "}"],
     "description": "creates a media query for devices with mouse/touchpad"
+  },
+
+  "background-image": {
+    "scope": "scss",
+    "prefix": "bg",
+    "body": ["@include background-image(${0:cover});"],
+    "description": "creates a bg-image template with default size === cover"
+  },
+
+  "mask-image": {
+    "scope": "scss",
+    "prefix": "mask",
+    "body": ["@include mask-image(${0:contain});"],
+    "description": "creates a mask-image template with default size === contain"
   }
 }

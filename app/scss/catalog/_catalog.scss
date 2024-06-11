@@ -26,6 +26,7 @@
 
   &__controls {
     display: flex;
+    align-items: center;
     column-gap: 15px;
 
     @include wmax($lg) {
@@ -50,9 +51,7 @@
       width: 32px;
       height: 36px;
       mask-image: url("../images/sprite.svg#filter");
-      mask-size: contain;
-      mask-position: center;
-      mask-repeat: no-repeat;
+      @include mask-image(contain);
       background-color: $accent-900;
     }
 
@@ -75,6 +74,22 @@
 
     @include wmax($lg) {
       column-gap: 10px;
+    }
+  }
+
+  &__label {
+    min-width: 150px;
+
+    @include wmax($sm) {
+      min-width: 139px;
+    }
+
+    &--quantity {
+      min-width: 94px;
+
+      @include wmax($sm) {
+        min-width: 84px;
+      }
     }
   }
 
