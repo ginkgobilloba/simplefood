@@ -1,0 +1,17 @@
+// STAR-RATING customization
+
+.Starry>.Starry-blank,
+.Starry>.Starry-active,
+.Starry>.Starry-hover {
+  column-gap: 6px;
+}
+
+.Starry .Starry-star {
+  padding: 0;
+}
+
+.Starry-star img {
+  max-width: none;
+  width: 16px;
+  height: 16px;
+}

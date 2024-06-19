@@ -1,0 +1,186 @@
+<section class="description section">
+  <div class="container">
+    <h2 class="sr-only">
+      Информация о товаре
+    </h2>
+    <ul class="description__filter">
+      <li class="description__filter-item">
+        <button class="description__filter-btn current" type="button" data-filter="desc">
+          Описание
+        </button>
+      </li>
+      <li class="description__filter-item">
+        <button class="description__filter-btn" type="button" data-filter="param">
+          Характеристики
+        </button>
+      </li>
+      <li class="description__filter-item">
+        <button class="description__filter-btn" type="button" data-filter="rev">
+          Отзывы (<span class="description__reviews-quantity">2</span>)
+        </button>
+      </li>
+    </ul>
+
+    <div class="description__content">
+      <section class="description__section desc show">
+        <h3 class="sr-only">
+          Описание товара
+        </h3>
+        <div class="description__text">
+          <p>
+            Рубленый бифштекс из натуральной говядины на карамелизованной булочке, с ломтиком сыра «Чеддер», кетчупом,
+            горчицей, луком и маринованными огурчиками.
+          </p>
+          <p>
+            Аллергены: Глютен, Молоко, Горчица, Может содержать сою, яйцо, следы кунжута
+          </p>
+          <p>
+            Внешний вид товара может отличаться от изображений, представленных на сайте.
+          </p>
+        </div>
+      </section>
+
+      <section class="description__section param">
+        <h3 class="sr-only">
+          Характеристики товара
+        </h3>
+        <ul class="description__parameters-list">
+          <li class="description__parameters-item">
+            <span class="description__parameter">
+              Диаметр:
+            </span>
+            20 см
+          </li>
+          <li class="description__parameters-item">
+            <span class="description__parameter">
+              Вес:
+            </span>
+            300 гр
+          </li>
+          <li class="description__parameters-item">
+            <span class="description__parameter">
+              Калорийность (на 100г):
+            </span>
+            295 ккал
+          </li>
+          <li class="description__parameters-item">
+            <span class="description__parameter">
+              Срок хранения:
+            </span>
+            до 3 дней
+          </li>
+        </ul>
+      </section>
+
+      <section class="description__section rev">
+        <h3 class="description-title">
+          Мнения наших клиентов
+        </h3>
+        <ul class="description__reviews-list">
+          <li class="description__reviews-item">
+            <blockquote class="review">
+              <div class="review__top">
+                <cite class="review__cite">
+                  <img class="review__userpic" src="./images/userpic.webp" alt="Андрей" width="70" height="70" loading="lazy">
+                  <span class="review__userinfo">
+                    <span class="review__username">
+                      Андрей
+                    </span>
+                    <span class="review__date">
+                      10.06.2021
+                    </span>
+                  </span>
+                </cite>
+                <div class="star-rating-readonly" data-rating="100"></div>
+              </div>
+              <div class="review__text">
+                <p>
+                  Доставили быстро. Товар свежий и очень вкусный, буду пробовать еще!))
+                </p>
+              </div>
+            </blockquote>
+          </li>
+
+          <li class="description__reviews-item">
+            <blockquote class="review">
+              <div class="review__top">
+                <cite class="review__cite">
+                  <img class="review__userpic" src="./images/userpic.webp" alt="Екатерина Белая" width="70" height="70" loading="lazy">
+                  <span class="review__userinfo">
+                    <span class="review__username">
+                      Екатерина Белая
+                    </span>
+                    <span class="review__date">
+                      7.06.2021
+                    </span>
+                  </span>
+                </cite>
+                <div class="star-rating-readonly" data-rating="80"></div>
+              </div>
+              <div class="review__text">
+                <p>
+                  этот бургер неплохой чтобы перекусить, когда нет возможности или времени что-нибудь приготовить. Это
+                  отличный вариант, чтобы съесть на ходу, но чтобы побаловать себя, я больше предпочту пиццу
+                </p>
+              </div>
+            </blockquote>
+          </li>
+        </ul>
+
+        <div class="review-form">
+          <h4 class="description-title">
+            Оставить отзыв
+          </h4>
+          <form class="review-form__form" action="#" name="product-review">
+
+            <label class="review-form__label review-form__label--rating">
+              <span class="review-form__desc review-form__desc--required">
+                Ваша оценка
+              </span>
+              <input type="hidden" name="rating">
+              <div class="star-rating"></div>
+            </label>
+
+            <div class="review-form__inner">
+              <div class="review-form__column review-form__column--left">
+                <label class="review-form__label">
+                  <span class="review-form__desc review-form__desc--required">
+                    Ваш отзыв
+                  </span>
+                  <textarea class="review-form__field review-form__field--big" name="message" placeholder="Введите текст отзыва" required></textarea>
+                </label>
+              </div>
+
+              <div class="review-form__column review-form__column--right">
+                <label class="review-form__label">
+                  <span class="review-form__desc">
+                    Имя
+                  </span>
+                  <input class="review-form__field" type="text" name="username" placeholder="Введите ваше имя">
+                </label>
+                <label class="review-form__label">
+                  <span class="review-form__desc review-form__desc--required" lang="en">
+                    Email
+                  </span>
+                  <input class="review-form__field" type="email" name="usermail" placeholder="youremail@mail.com" required>
+                </label>
+              </div>
+            </div>
+
+            <label class="review-form__label review-form__label--checkbox">
+              <span class="review-form__desc review-form__desc--checkbox">
+                Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+              </span>
+              <input class="sr-only" type="checkbox" name="save-data" value="true">
+            </label>
+
+            <button class="primary-btn primary-btn--big" type="submit">
+              Оставить отзыв
+            </button>
+          </form>
+        </div>
+
+      </section>
+    </div>
+  </div>
+</section>

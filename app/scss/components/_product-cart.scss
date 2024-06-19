@@ -1,0 +1,88 @@
+.product-cart {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 20px;
+
+  &__quantity {
+    display: flex;
+    border-radius: 3px;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s;
+
+    &:has(.product-cart__quantity-input:focus) {
+      outline-color: rgba($accent-900, 0.7);
+    }
+  }
+
+  &__quantity-btn {
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent-900;
+    color: $white;
+    outline: 2px solid transparent;
+    transition: outline-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      @include mask-image(contain);
+      background-color: currentColor;
+    }
+
+    &:focus {
+      outline-color: rgba($accent-900, 0.7);
+    }
+
+    @include hover {
+      background-color: $btn-accent;
+    }
+
+    &:active {
+      box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
+    }
+
+    &--minus {
+      border-radius: 3px 0 0 3px;
+
+      &::before {
+        mask-image: url("../images/sprite.svg#minus");
+      }
+    }
+
+    &--plus {
+      border-radius: 0 3px 3px 0;
+
+      &::before {
+        mask-image: url("../images/sprite.svg#plus");
+      }
+    }
+  }
+
+  &__quantity-input {
+    width: 70px;
+    height: 100%;
+    background-color: $accent-600;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $auxillary;
+
+    // Прибираємо стрілочки у input type=number
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+}

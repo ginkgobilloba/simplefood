@@ -28,7 +28,7 @@
   margin: 0;
   width: 11px;
   height: 11px;
-  mask-image: url("../images/sprite.svg#arrow-dropdown");
+  mask-image: url("../images/sprite.svg#chevron-bottom");
   @include mask-image(contain);
   background-color: $secondary-900;
 }

@@ -1,109 +1,55 @@
 .review {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  box-sizing: border-box;
 
-  &__img {
-    margin-right: 40px;
-    border-radius: 50%;
+  &__top {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px 40px;
+
+    @include wmax($lg, l) {
+      margin-bottom: 15px;
+    }
+
+    @include wmax($sm) {
+      margin-bottom: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__cite {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+
+  &__userpic {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-
-    @include wmax($lg) {
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
-
-    @include wmax($lg, l) {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-
-    @include wmax($sm) {
-      width: 100px;
-      margin-bottom: 20px;
-    }
-  }
-
-  &__box {
-    max-width: 650px;
-    width: 100%;
-    padding: 0 40px;
-  }
-
-  &__text {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 30px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 24px;
-      height: 20px;
-      @include mask-image(contain);
-      background-color: $secondary-900;
-    }
-
-    &::before {
-      top: 0;
-      left: -40px;
-      mask-image: url("../images/sprite.svg#quote-open");
-    }
-
-    &::after {
-      bottom: 0;
-      right: -40px;
-      mask-image: url("../images/sprite.svg#quote-close");
-    }
-
-    p {
-      font-style: italic;
-      line-height: 1.5;
-
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
-
-    @include wmax($lg) {
-      margin-bottom: 20px;
-    }
-
-    @include wmax($lg, l) {
-      font-size: 14px;
-    }
-
-    @include wmax($sm) {
-      font-size: 14px;
-    }
-  }
-
-  &__user-info {
-    font-size: 14px;
+    border-radius: 50%;
   }
 
   &__username {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
-    color: $accent-900;
-
-    @include wmax($lg, l) {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    @include wmax($sm) {
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
+    line-height: normal;
   }
 
-  @include wmax($lg) {
-    flex-direction: column;
+  &__date {
+    font-size: 18px;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    line-height: 1.5;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

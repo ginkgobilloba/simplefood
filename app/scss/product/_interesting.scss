@@ -1,0 +1,68 @@
+.interesting {
+
+  &__top {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    @include wmax($xl) {
+      margin-bottom: 45px;
+    }
+
+    @include wmax($lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 25px;
+
+    @include wmax($md) {
+      display: none;
+    }
+
+    @include wmax($lg, l) {
+      display: none;
+    }
+  }
+
+  .swiper-wrapper {
+    @include wmax($md) {
+      margin-bottom: 30px;
+    }
+
+    @include wmax($lg, l) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 212px;
+    height: auto;
+
+    @include wmax(576) {
+      max-width: none;
+    }
+  }
+
+  .product-card {
+    box-sizing: border-box;
+  }
+
+  .pagination-slider {
+    display: none;
+
+    @include wmax($md) {
+      display: flex;
+    }
+
+    @include wmax($lg, l) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.product-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  padding: 54px 96px;
+  display: flex;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba($black, 0.15);
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 60px 60px 87px;
+    margin: auto 0;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba($black, 0.15);
+    background-color: $white;
+
+    @include wmax($xl) {
+      padding: 60px;
+    }
+
+    @include wmax($lg) {
+      padding: 45px;
+    }
+
+    @include wmax($sm) {
+      padding: 20px;
+    }
+  }
+
+  .burger {
+    position: absolute;
+    z-index: 3;
+    top: 30px;
+    right: 21px;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background-color: $white;
+    color: $secondary-900;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+
+    &::before,
+    &::after {
+      border-radius: 1px;
+    }
+
+    &:focus {
+      background-color: rgba($accent-800, 0.1);
+    }
+
+    @include hover {
+      background-color: rgba($accent-750, 0.4);
+      color: $accent-800;
+    }
+
+    &:active {
+      background-color: $accent-700;
+    }
+
+    @include wmax($lg) {
+      width: 44px;
+      height: 44px;
+      top: 15px;
+      right: 15px
+    }
+  }
+
+  .swiper-wrapper {
+    box-sizing: border-box;
+    margin-bottom: 60px;
+
+    @include wmax($xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    @include hmax(1079) {
+      width: 500px;
+    }
+
+    @include wmax($lg, l) {
+      width: 300px;
+    }
+  }
+
+  .slider-popup-btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    @include wmax($lg) {
+      display: none;
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  @include wmax($lg) {
+    padding: 54px;
+  }
+
+  @include wmax($sm) {
+    padding: 40px 15px;
+  }
+
+  @include wmax($lg, l) {
+    padding: 30px 15px;
+  }
+}

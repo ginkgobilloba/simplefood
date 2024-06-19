@@ -26,6 +26,12 @@
         background-color: $secondary-850;
       }
     }
+
+    &--adaptive {
+      @include wmax($sm) {
+        display: none;
+      }
+    }
   }
 
   &__link {
@@ -51,5 +57,11 @@
 
   @include wmax($lg) {
     margin-bottom: 40px;
+  }
+
+  &--product {
+    @include wmax($lg) {
+      margin-bottom: 30px;
+    }
   }
 }

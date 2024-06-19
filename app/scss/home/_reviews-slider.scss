@@ -1,0 +1,87 @@
+.reviews-slider {
+  text-align: center;
+
+  .container {
+    max-width: 1020px;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 43px;
+
+    @include wmax($lg) {
+      margin-bottom: 30px;
+    }
+
+    @include wmax($lg, l) {
+      margin-bottom: 0;
+    }
+
+    @include wmax($sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  .swiper-controls {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 21px;
+
+    @include wmax($lg, l) {
+      padding: 0;
+    }
+
+    @include wmax($sm) {
+      padding: 0;
+    }
+  }
+
+  .pagination-slider {
+
+    @include wmax($lg, l) {
+      display: none;
+    }
+
+    @include wmax($sm) {
+      display: none;
+    }
+  }
+
+  .slider-btn {
+
+    @include wmax($lg, l) {
+      position: absolute;
+      z-index: 3;
+      top: 33px;
+    }
+
+    @include wmax($sm) {
+      position: absolute;
+      z-index: 3;
+      top: 33px;
+    }
+
+    &--prev {
+
+      @include wmax($lg, l) {
+        right: calc(50% + 100px);
+      }
+
+      @include wmax($sm) {
+        right: calc(50% + 100px);
+      }
+    }
+
+    &--next {
+
+      @include wmax($lg, l) {
+        left: calc(50% + 100px);
+      }
+
+      @include wmax($sm) {
+        left: calc(50% + 100px);
+      }
+    }
+  }
+}

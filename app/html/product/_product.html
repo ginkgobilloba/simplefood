@@ -1,0 +1,124 @@
+<section class="product section">
+  <div class="container">
+
+    <div class="product__top">
+      <div class="swiper" id="productSlider">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <div class="product__box">
+              <img class="product__img" src="./images/product/01.webp" alt="Чизбургер с листьями салата" width="400" height="400">
+              <button class="product__btn" type="button">
+                <span class="sr-only">
+                  Открыть модальное окно с фотографиями товара
+                </span>
+              </button>
+            </div>
+          </li>
+
+          <li class="swiper-slide">
+            <div class="product__box">
+              <img class="product__img" src="./images/product/01.webp" alt="Чизбургер с листьями салата" width="400" height="400">
+              <button class="product__btn" type="button">
+                <span class="sr-only">
+                  Открыть модальное окно с фотографиями товара
+                </span>
+              </button>
+            </div>
+          </li>
+
+          <li class="swiper-slide">
+            <div class="product__box">
+              <img class="product__img" src="./images/product/01.webp" alt="Чизбургер с листьями салата" width="400" height="400">
+              <button class="product__btn" type="button">
+                <span class="sr-only">
+                  Открыть модальное окно с фотографиями товара
+                </span>
+              </button>
+            </div>
+          </li>
+        </ul>
+        <button class="slider-popup-btn slider-popup-btn--prev" type="button">
+          <span class="sr-only">
+            Показать предыдущую фотографию товара
+          </span>
+        </button>
+
+        <button class="slider-popup-btn slider-popup-btn--next" type="button">
+          <span class="sr-only">
+            Показать следующую фотографию товара
+          </span>
+        </button>
+      </div>
+
+      <div class="product__info">
+        <h2 class="title">
+          Чизбургер с листьями салата
+        </h2>
+        <div class="star-rating-readonly" data-rating="80"></div>
+        <div class="product__price">
+          <span class="product__cost">
+            160
+          </span>
+          <span class="currency">
+            грн.
+          </span>
+        </div>
+
+        <form class="product-cart" action="#" name="products-quantity">
+          <div class="product-cart__quantity">
+            <button class="product-cart__quantity-btn product-cart__quantity-btn--minus" type="button">
+              <span class="sr-only">
+                Уменьшить количество товара на 1 единицу
+              </span>
+            </button>
+
+            <label>
+              <span class="sr-only">
+                Укажите сколько единиц товара нужно добавить в корзину
+              </span>
+              <input class="product-cart__quantity-input" type="number" name="quantity" value="1" required>
+            </label>
+
+            <button class="product-cart__quantity-btn product-cart__quantity-btn--plus" type="button">
+              <span class="sr-only">
+                Увеличить количество товара на 1 единицу
+              </span>
+            </button>
+          </div>
+
+          <button class="auxillary-btn auxillary-btn--cart" type="submit">
+            Добавить в корзину
+          </button>
+        </form>
+
+        <section class="product__delivery">
+          <h3 class="product__subtitle product__subtitle--underline">
+            Доставка и оплата
+          </h3>
+
+          <ul class="product__delivery-list">
+            <li class="product__delivery-item">
+              Минимальная сумма заказа — 160
+              <span class="currency">
+                грн.
+              </span>
+            </li>
+            <li class="product__delivery-item">
+              Время доставки заказа — 80-140 мин.
+            </li>
+            <li class="product__delivery-item">
+              Оплата осуществляется только банковской картой.
+            </li>
+            <li class="product__delivery-item">
+              Окончательная сумма заказа формируется после сбора товаров.
+            </li>
+          </ul>
+
+          <a class="showmore-link" href="#">
+            Подробнее
+          </a>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

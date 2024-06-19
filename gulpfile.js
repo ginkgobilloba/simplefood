@@ -72,6 +72,7 @@ function scripts() {
     "./node_modules/mixitup/dist/mixitup.js",
     "./node_modules/swiper/swiper-bundle.js",
     "./node_modules/choices.js/public/assets/scripts/choices.js",
+    "./node_modules/starry-rating/dist/starry.js",
     "./app/js/main.js"
   ])
     .pipe(gulpPlumber(gulpPlumberConfig))
@@ -143,6 +144,7 @@ function scriptsDocs() {
     "./node_modules/mixitup/dist/mixitup.js",
     "./node_modules/swiper/swiper-bundle.js",
     "./node_modules/choices.js/public/assets/scripts/choices.js",
+    "./node_modules/starry-rating/dist/starry.js",
     "./app/js/main.js"
   ])
     .pipe(gulpPlumber(gulpPlumberConfig))

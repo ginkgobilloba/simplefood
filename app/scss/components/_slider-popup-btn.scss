@@ -1,0 +1,53 @@
+.slider-popup-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  background-color: $white;
+  transition: outline-color 0.3s, background-color 0.3s;
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    @include mask-image(contain);
+    background-color: $auxillary;
+    transition: background-color 0.3s;
+  }
+
+  &:focus {
+    outline-color: rgba($accent-900, 0.7);
+  }
+
+  @include hover {
+    background-color: $accent-600;
+
+    &::before {
+      background-color: rgba($accent-900, 0.7);
+    }
+  }
+
+  &:active {
+    background-color: $white;
+
+    &::before {
+      background-color: $accent-900;
+    }
+  }
+
+  &--prev {
+    &::before {
+      mask-image: url("../images/sprite.svg#chevron-left");
+    }
+  }
+
+  &--next {
+    &::before {
+      mask-image: url("../images/sprite.svg#chevron-right");
+    }
+  }
+}

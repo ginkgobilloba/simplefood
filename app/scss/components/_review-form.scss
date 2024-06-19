@@ -1,0 +1,177 @@
+.review-form {
+
+  .description-title {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    color: $secondary-950;
+  }
+
+  &__inner {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+
+    @include wmax(576) {
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    display: block;
+
+    &--rating {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+
+      .review-form__desc {
+        margin-bottom: 0;
+      }
+    }
+
+    &--checkbox {
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+  }
+
+  &__desc {
+    display: block;
+    margin-bottom: 15px;
+
+    &--required {
+      &::after {
+        content: "*";
+      }
+    }
+
+    &--checkbox {
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding-left: 34px;
+      font-size: 18px;
+      transition: color 0.3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 3px;
+        background-color: $white;
+        outline: 1px solid $secondary-850;
+        outline-offset: -1px;
+        transition: outline-color 0.3s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 12px;
+        height: 12px;
+        mask-image: url("../images/sprite.svg#check");
+        @include mask-image(contain);
+        transition: background-color 0.3s;
+      }
+
+      @include hover {
+        color: $accent-900;
+
+        &::before {
+          outline-color: $accent-900;
+        }
+      }
+
+      &:has(+ input:focus) {
+        &::before {
+          outline-color: $accent-900;
+        }
+      }
+
+      &:has(+ input:checked) {
+
+        &::before {
+          outline-color: $auxillary ;
+        }
+
+        &::after {
+          background-color: $auxillary;
+        }
+      }
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    height: 57px;
+    padding: 17px;
+    border: 1px solid $secondary-900;
+    border-radius: 5px;
+    background-color: $white;
+    font-size: 16px;
+    outline: 2px solid transparent;
+    outline-offset: -1px;
+    transition: outline-color 0.3s;
+
+    &::placeholder {
+      color: $secondary-850;
+      transition: color 0.3s;
+    }
+
+    &:focus {
+      outline-color: $accent-900;
+    }
+
+    @include hover {
+      &::placeholder {
+        color: $auxillary;
+      }
+    }
+
+    &--big {
+      min-height: 165px;
+      max-height: 300px;
+      resize: vertical;
+    }
+  }
+
+  &__column {
+    width: 100%;
+
+    .review-form__label {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+
+        @include wmax($sm) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &--left {
+      max-width: 400px;
+
+      @include wmax($sm) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--right {
+      max-width: 260px;
+    }
+
+    @include wmax($sm) {
+      max-width: none;
+    }
+  }
+}

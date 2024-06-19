@@ -1,0 +1,170 @@
+.description {
+  padding-top: 30px;
+  border-top: 2px solid $secondary-850;
+
+  .container {
+    max-width: 720px;
+  }
+
+  &__filter {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 60px;
+
+    @include wmax($lg) {
+      justify-content: center;
+    }
+
+    @include wmax($md) {
+      max-width: fit-content;
+      padding: 3px 3px 10px;
+      margin: 0 auto 20px;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow: auto;
+    }
+
+    @include wmax($lg, l) {
+      column-gap: 45px;
+    }
+
+    @include wmax($sm) {
+      column-gap: 30px;
+    }
+  }
+
+  &__filter-item {
+    flex-shrink: 0;
+  }
+
+  &__filter-btn {
+    border-radius: 5px;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $auxillary;
+    outline: 3px solid transparent;
+    transition: outline-color 0.3s, color 0.3s, text-shadow 0.3s;
+
+    &:focus {
+      outline-color: rgba($accent-800, 0.7);
+    }
+
+    @include hover {
+      color: $accent-900;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba($auxillary, 0.5);
+    }
+
+    &.current {
+      color: $accent-900;
+    }
+
+    @include wmax($lg, l) {
+      font-size: 20px;
+    }
+
+    @include wmax($sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    &.show {
+      position: static;
+      width: auto;
+      height: auto;
+      opacity: 1;
+      overflow: visible;
+      visibility: visible;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__text {
+    line-height: 1.5;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__parameters-list {
+    line-height: 1.5;
+  }
+
+  &__parameters-item {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include wmax($lg, l) {
+        margin-bottom: 15px;
+      }
+
+      @include wmax($sm) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__parameter {
+    font-weight: 500;
+  }
+
+  .description-title {
+    margin-bottom: 30px;
+  }
+
+  &__reviews-list {
+    margin-bottom: 60px;
+
+    @include wmax($lg, l) {
+      margin-bottom: 45px;
+    }
+
+    @include wmax($sm) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__reviews-item {
+    &:not(:last-child) {
+      padding-bottom: 20px;
+      border-bottom: 2px solid $secondary-850;
+      margin-bottom: 25px;
+
+      @include wmax($lg, l) {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
+
+      @include wmax($sm) {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  @include wmax($md) {
+    padding-top: 27px;
+  }
+}

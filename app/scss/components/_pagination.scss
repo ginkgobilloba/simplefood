@@ -21,6 +21,7 @@
     font-size: 18px;
     color: $auxillary;
     outline: 2px solid transparent;
+    transition: outline-color 0.3s, border-color 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
 
     &:focus {
       outline-color: $accent-900;

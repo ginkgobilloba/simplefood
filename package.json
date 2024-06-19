@@ -30,6 +30,7 @@
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.7.1",
     "mixitup": "^3.3.1",
+    "starry-rating": "^5.1.0",
     "swiper": "^11.1.1"
   }
 }

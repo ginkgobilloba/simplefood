@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./blocks/_head.html", {pageTitle: "Чизбургер с листьями салата"})
+
+<body>
+
+  @@include("./blocks/_header.html", {currentPage: "catalog"})
+
+  <main class="main">
+
+    <h1 class="sr-only">
+      Страница товара
+    </h1>
+
+    <div class="breadcrumbs breadcrumbs--product">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          @@loop("./components/_breadcrumbs-item.html", [
+          {"text": "Главная", "path": "/", "adaptive": "false"},
+          {"text": "Каталог товаров", "path": "./catalog.html", "adaptive": "true"},
+          {"text": "Чизбургер с листьями салата", "path": "", "adaptive": "false"}
+          ])
+        </ul>
+      </div>
+    </div>
+
+    @@include("./product/_product.html")
+
+    @@include("./product/_description.html")
+
+    @@include("./product/_interesting.html")
+
+    @@include("./product/_product-popup.html")
+
+  </main>
+
+  @@include("./blocks/_footer.html")
+
+</body>
+</html>

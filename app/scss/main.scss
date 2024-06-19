@@ -3,9 +3,10 @@
 @import './base/mixins';
 @import './base/fonts';
 @import './base/reset';
-@import './node_modules/swiper/swiper';
-@import './node_modules/ion-rangeslider/css/ion.rangeSlider';
-@import './node_modules/choices.js/public/assets/styles/choices';
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/ion-rangeslider/css/ion.rangeSlider';
+@import '../../node_modules/choices.js/public/assets/styles/choices';
+@import '../../node_modules/starry-rating/dist/starry';
 @import './base/global';
 @import './base/typography';
 
@@ -19,17 +20,23 @@
 @import './components/contacts';
 @import './components/restaurant-card';
 @import './components/slider-responsive';
-@import './components/review';
+@import './components/review-slider';
 @import './components/nav';
 @import './components/mobile-menu';
 @import './components/burger';
 @import './components/filter';
+@import './components/slider-btn';
+@import './components/slider-popup-btn';
 @import './components/pagination-slider';
 @import './components/breadcrumbs';
 @import './components/dropdown';
 @import './components/sidebar';
 @import './components/range-filter';
 @import './components/pagination';
+@import './components/product-cart';
+@import './components/star-rating';
+@import './components/review';
+@import './components/review-form';
 
 // BLOCKS
 @import './blocks/header';
@@ -41,8 +48,14 @@
 @import './home/popular';
 @import './home/features';
 @import './home/restaurants';
-@import './home/reviews';
+@import './home/reviews-slider';
 
 // CATALOG PAGE
 @import './catalog/catalog';
 @import './catalog/discounts';
+
+// PRODUCT PAGE
+@import './product/product';
+@import './product/description';
+@import './product/interesting';
+@import './product/product-popup';
