@@ -218,6 +218,7 @@ const productPopupSlider = new Swiper("#productPopupSlider", {
 
 const swiperInteresting = new Swiper("#interestingSlider", {
   loop: true,
+  autoplay: true,
   slidesPerView: "auto",
   spaceBetween: 27,
   breakpoints: {
