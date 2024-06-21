@@ -221,20 +221,24 @@ const swiperInteresting = new Swiper("#interestingSlider", {
   autoplay: true,
   slidesPerView: "auto",
   spaceBetween: 27,
+  slidesPerGroup: 1,
   breakpoints: {
     0: {
       slidesPerView: 2,
-      spaceBetween: 3
+      spaceBetween: 3,
+      slidesPerGroup: 2
     },
 
     577: {
       slidesPerView: "auto",
-      spaceBetween: 3
+      spaceBetween: 3,
+      slidesPerGroup: 1
     },
 
     993: {
       spaceBetween: 27,
-      slidesPerView: "auto"
+      slidesPerView: "auto",
+      slidesPerGroup: 1
     }
   },
 
