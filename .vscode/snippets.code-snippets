@@ -47,21 +47,28 @@
   "mouse": {
     "scope": "scss",
     "prefix": "hv",
-    "body": ["@include hover {", "$0", "}"],
+    "body": ["@include hover {", "  $0", "}"],
     "description": "creates a media query for devices with mouse/touchpad"
   },
 
   "background-image": {
     "scope": "scss",
     "prefix": "bg",
-    "body": ["@include background-image(${0:cover});"],
+    "body": ["@include background-image(${1:cover});"],
     "description": "creates a bg-image template with default size === cover"
   },
 
   "mask-image": {
     "scope": "scss",
     "prefix": "mask",
-    "body": ["@include mask-image(${0:contain});"],
+    "body": ["@include mask-image(${1:contain});"],
     "description": "creates a mask-image template with default size === contain"
+  },
+
+  "font-face": {
+    "scope": "scss",
+    "prefix": "font",
+    "body": ["@include font-face(${1:family}, ${2:path}, ${3:weight});"],
+    "description": "creates a font-face template width default font-style === normal"
   }
 }
